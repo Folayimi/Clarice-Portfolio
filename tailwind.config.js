@@ -12,7 +12,7 @@ module.exports = {
         primary1: "#FFFFFF",
         primary2: "#8C8C8C",
         primary3: "#3A3A3A",
-        primary4: "#9C9C9C",       
+        primary4: "#9C9C9C",
         primary7: "#CB0000",
         primary8: "#0C4DF3",
         primary9: "#1BD017",
@@ -22,21 +22,24 @@ module.exports = {
         },
         secondary2: {
           100: "#EA5718 0%",
-          200: "#C70F0F 100%"
+          200: "#C70F0F 100%",
         },
         secondary3: {
           100: "#056ECF 0%",
-          200: "#180878 65%"
-        }
+          200: "#180878 65%",
+        },
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
-      screen: {
-        sm: "640px",
-        md: "840px",
-        lg: "1024px",
-        xlg: "1040px",
+      screens: {
+        sm: { max: "600px" },
+        sm1: { max: "700px" },
+        md: { max: "1100px" },
+        md1: { max: "850px"},
+        lg: { max: "1023px" },
+        xl: { max: "1280px" },
+        "2xl": { max: "1536px" },
       },
     },
   },

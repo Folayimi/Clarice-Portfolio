@@ -10,7 +10,7 @@ import Project4 from "./Project4";
 const LandingPage = () => {
   return (
     <>
-      <div className="font-sans">
+      <div className="font-sans bg-red-700 w-[100vw]">
         <Header />
         <HeroSection />
         <About />

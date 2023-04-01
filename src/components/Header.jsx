@@ -3,9 +3,9 @@ import { ChevronDown, bar } from "heroicons-react";
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 text-primary1 flexbm z-50 w-full py-4 pr-4 md:pr-20 pl-4 bg-black font-sans">
-        <div className="font-bold text-2xl sm:text-3xl">Clarice</div>
-        <div className="sm:block hidden">
+      <div className="fixed top-0 left-0 text-primary1 flexbm z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
+        <div className="font-bold text-3xl sm1:text-2xl">Clarice</div>
+        <div className="sm1:hidden block">
           <ul className="flexmm gap-7 list-none text-primary2 font-normal text-sm">
             <li className="cursor-pointer">Home</li>
             <li className="cursor-pointer">About me</li>
@@ -16,7 +16,7 @@ const Header = () => {
             <li className="cursor-pointer">Contact</li>
           </ul>
         </div>
-        <div className="sm:hidden cursor-pointer block">
+        <div className="sm1:block cursor-pointer hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

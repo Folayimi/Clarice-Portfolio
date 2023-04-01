@@ -7,13 +7,13 @@ import Typewriter from "typewriter-effect";
 const HeroSection = () => {
   return (
     <>
-      <div className="relative bg-black pt-28 pr-10 pl-20 cflexbm h-[100vh] font-sans">
-        <div className="text-primary1 text-6xl cflexss w-full gap-10 font-semibold">
-          <div className="flexsm w-full">
+      <div className="relative w-[100%] bg-black pt-28 md1:pt-20 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[85vh] h-[100vh] font-sans">
+        <div className="text-primary1 text-6xl md:text-5xl md1:text-3xl cflexss w-full gap-10 md1:gap-4 font-semibold">
+          <div className="flexsm w-full md:w-[50%] md1:w-full">
             <p>Hey There,</p>
           </div>
-          <div className="flexem w-full">
-            <div className="w-[60%]">
+          <div className="md:justify-start flexem w-full md:w-[70%] md1:w-full">
+            <div className="w-[60%] md1:w-full">
               <Typewriter
                 options={{
                   cursor: "_",
@@ -43,7 +43,7 @@ const HeroSection = () => {
         <div className="flexmm cursor-pointer">
           <ChevronDown color="white" size="100px" />
         </div>
-        <div className="absolute bottom-0 left-16 w-[48%]">
+        <div className="absolute bottom-0 left-16 w-[48%] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
           <Image src={person} width="100%" height="100%" />
         </div>
       </div>
