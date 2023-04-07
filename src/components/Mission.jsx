@@ -37,7 +37,7 @@ const Mission = ({ position, scrollToRef, p1, p2, p3, p4 }) => {
         ref={position}
         className="bg-gradient-to-b from-secondary1-100 to-secondary1-200 text-primary1"
       >
-        <div className="pt-28 md:pt-10 pl-10 md:p-5 flexbm md:flex-col-reverse gap-10">
+        <div className="pt-28 md:pt-20 pl-10 md:p-5 flexbm md:flex-col-reverse gap-10">
           <div className="relative cflexms gap-8 w-1/2 md:w-full">
             <p className="font-bold text-6xl md:text-5xl">Mission</p>
             <p className="font-normal text-2xl md:text-xl">
