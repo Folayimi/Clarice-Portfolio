@@ -2,10 +2,10 @@ import Image from "next/image";
 import citron from "../Assets/citron.png";
 import giftbox from "../Assets/giftbox.jpg";
 
-const Project1 = () => {
+const Project1 = ({ position }) => {
   return (
     <>
-      <div className="cflexms pt-32 md:pt-20">
+      <div ref={position} className="cflexms pt-32 md:pt-20">
         <div className="cflexss pl-20 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
@@ -29,7 +29,9 @@ const Project1 = () => {
           </div>
           <div className="cflexms gap-3 py-28 md:py-20 w-2/3 md:w-full">
             <p className="font-bold text-5xl capitalize">$giftroom token</p>
-            <p className="font-bold text-2xl">The reward token representing giftroom </p>
+            <p className="font-bold text-2xl">
+              The reward token representing giftroom{" "}
+            </p>
             <p>
               As a part of the platform, we developed a $gifttoken as a form of
               currency for gifting. As a stimulant for gifting, users receive
@@ -39,7 +41,7 @@ const Project1 = () => {
             </p>
           </div>
         </div>
-        <Image src={giftbox} alt="giftbox" width="100vw"/>
+        <Image src={giftbox} alt="giftbox" width="100vw" />
       </div>
     </>
   );

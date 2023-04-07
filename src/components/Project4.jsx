@@ -2,7 +2,7 @@ import Image from "next/image";
 import enter from "../Assets/enter.png";
 import companies from "../Assets/companies.png";
 
-const Project4 = () => {
+const Project4 = ({ position }) => {
   const Tickets = [
     {
       title: "ID Verification",
@@ -52,7 +52,10 @@ const Project4 = () => {
   ];
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b bg-black text-primary1 md:pt-20">
+      <div
+        ref={position}
+        className="cflexms pt-32 bg-gradient-to-b bg-black text-primary1 md:pt-20"
+      >
         <div className="cflexss px-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
@@ -86,10 +89,10 @@ const Project4 = () => {
                 return (
                   <>
                     <div className="tickets bg-gradient-to-r from-secondary2-100 to-secondary2-200 w-[22em] md:w-[20em] flex-grow-0 flex-shrink">
-                        <div className=" border-2 border-white rounded-2xl py-1 px-5">
-                            <p>{ticket.title}</p>
-                        </div>
-                        <p className="text-sm">{ticket.content}</p>
+                      <div className=" border-2 border-white rounded-2xl py-1 px-5">
+                        <p>{ticket.title}</p>
+                      </div>
+                      <p className="text-sm">{ticket.content}</p>
                     </div>
                   </>
                 );

@@ -1,11 +1,14 @@
 import Image from "next/image";
 import gogi from "../Assets/gogi.png";
-import companies from "../Assets/companies.png"
+import companies from "../Assets/companies.png";
 
-const Project3 = () => {
+const Project3 = ({ position }) => {
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20">
+      <div
+        ref={position}
+        className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20"
+      >
         <div className="cflexss pl-16 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
@@ -35,7 +38,9 @@ const Project3 = () => {
             </div>
           </div>
           <div className="cflexmm gap-3 pt-28 pb-32 md:text-center w-full">
-            <p className="font-bold text-4xl capitalize md:text-3xl">Compatible with these platforms </p>
+            <p className="font-bold text-4xl capitalize md:text-3xl">
+              Compatible with these platforms{" "}
+            </p>
             <Image src={companies} alt="companies" />
           </div>
         </div>

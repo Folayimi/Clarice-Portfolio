@@ -1,15 +1,36 @@
 import { ChevronDown, bar } from "heroicons-react";
 
-const Header = () => {
+const Header = ({ scrollToRef, hm, abt, mis }) => {
   return (
     <>
       <div className="fixed top-0 left-0 text-primary1 flexbm z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
         <div className="font-bold text-3xl sm1:text-2xl">Clarice</div>
         <div className="sm1:hidden block">
           <ul className="flexmm gap-7 list-none text-primary2 font-normal text-sm">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">About me</li>
-            <li className="cursor-pointer">Mission</li>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                scrollToRef(hm);
+              }}
+            >
+              Home
+            </li>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                scrollToRef(abt);
+              }}
+            >
+              About me
+            </li>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                scrollToRef(mis);
+              }}
+            >
+              Mission
+            </li>
             <li className="cursor-pointer flexmm">
               Companies <ChevronDown />
             </li>

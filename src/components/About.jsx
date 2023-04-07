@@ -1,7 +1,10 @@
-const About = () => {
+const About = ({ position }) => {
   return (
     <>
-      <div className="md:flex-col md:justify-start md:items-start flexbs py-24 md:py-10 pl-5 md:gap-10 md:px-5 pr-20">
+      <div
+        ref={position}
+        className="md:flex-col md:justify-start md:items-start flexbs py-24 md:py-10 pl-5 md:gap-10 md:px-5 pr-20"
+      >
         <div className="w-[35%] cflexss gap-20 md:w-full md:gap-10 ">
           <p className="text-primary2 font-semibold text-4xl">
             Clarice Bonaccorsi
@@ -47,16 +50,16 @@ const About = () => {
           </p>
           <div className="w-full flexmm gap-10 pt-5 md:text-center flex-wrap">
             <div className="text-[0.8rem] font-semibold cflexmm gap-3">
-                <p className="text-5xl font-bold">6+</p>
-                <p>Years of Experience</p>
+              <p className="text-5xl font-bold">6+</p>
+              <p>Years of Experience</p>
             </div>
             <div className="text-[0.8rem] font-semibold cflexmm gap-3">
-                <p className="text-5xl font-bold">4+</p>
-                <p>Projects completed</p>
+              <p className="text-5xl font-bold">4+</p>
+              <p>Projects completed</p>
             </div>
             <div className="text-[0.8rem] font-semibold cflexmm gap-3">
-                <p className="text-5xl font-bold">30+</p>
-                <p>Team members</p>
+              <p className="text-5xl font-bold">30+</p>
+              <p>Team members</p>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import man from "../Assets/man.png";
 import hexfill from "../Assets/hexfill.png";
 import { motion } from "framer-motion";
 
-const Mission = () => {
+const Mission = ({ position, scrollToRef, p1, p2, p3, p4 }) => {
   const buttonVariants = {
     hover: {
       cursor: "pointer",
@@ -33,7 +33,10 @@ const Mission = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-secondary1-100 to-secondary1-200 text-primary1">
+      <div
+        ref={position}
+        className="bg-gradient-to-b from-secondary1-100 to-secondary1-200 text-primary1"
+      >
         <div className="pt-28 md:pt-10 pl-10 md:p-5 flexbm md:flex-col-reverse gap-10">
           <div className="relative cflexms gap-8 w-1/2 md:w-full">
             <p className="font-bold text-6xl md:text-5xl">Mission</p>
@@ -66,6 +69,9 @@ const Mission = () => {
               className="card bg-primary1"
               whileHover={{ y: -20 }}
               transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              onClick={()=>{
+                scrollToRef(p1)
+              }}
             >
               <div>
                 <Image src={citron} alt="citron" />
@@ -75,6 +81,9 @@ const Mission = () => {
               className="card bg-primary7"
               whileHover={{ y: -20 }}
               transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              onClick={()=>{
+                scrollToRef(p2)
+              }}
             >
               <div className="w-[8em]">
                 <Image src={big} alt="citron" width="100%" height="100%" />
@@ -84,6 +93,9 @@ const Mission = () => {
               className="card bg-black"
               whileHover={{ y: -20 }}
               transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              onClick={()=>{
+                scrollToRef(p4)
+              }}
             >
               <div className="w-[4em]">
                 <Image src={enter} alt="citron" width="100%" height="100%" />
@@ -94,6 +106,9 @@ const Mission = () => {
               className="card bg-primary8"
               whileHover={{ y: -20 }}
               transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              onClick={()=>{
+                scrollToRef(p3)
+              }}
             >
               <div className="w-[6em]">
                 <Image src={gogi} alt="citron" width="100%" height="100%" />
