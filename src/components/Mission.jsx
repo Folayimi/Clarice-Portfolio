@@ -34,10 +34,10 @@ const Mission = () => {
   return (
     <>
       <div className="bg-gradient-to-b from-secondary1-100 to-secondary1-200 text-primary1">
-        <div className="pt-28 pl-10 flexsm gap-10">
-          <div className="relative cflexms gap-8 w-1/2">
-            <p className="font-bold text-6xl">Mission</p>
-            <p className="font-normal text-2xl">
+        <div className="pt-28 md:pt-10 pl-10 md:p-5 flexbm md:flex-col-reverse gap-10">
+          <div className="relative cflexms gap-8 w-1/2 md:w-full">
+            <p className="font-bold text-6xl md:text-5xl">Mission</p>
+            <p className="font-normal text-2xl md:text-xl">
               At the heart of all my work is a deep desire to make the world a
               better place. I am dedicated to spreading positivity and helping
               charitable organizations through my projects. I strive to create
@@ -46,20 +46,20 @@ const Mission = () => {
               working on creative projects that demonstrate a genuine change in
               the world and inspire others to do the same.
             </p>
-            <div className="absolute top-[-4em] left-[11em] w-[7em]">
+            <div className="absolute top-[-4em] left-[11em] w-[7em] md:w-[5em] md:top-[-2em]">
               <Image src={hexfill} alt="hexfill" />
             </div>
           </div>
-          <div className="relative w-1/2">
-            <div className="w-[23em]">
+          <div className="relative w-1/2 md:w-full md:flex md:justify-center">
+            <div className="w-[23em] md:w-[20em]">
               <Image src={earth} alt="earth" />
             </div>
-            <div className="absolute top-[-4em] right-0 w-[23em]">
+            <div className="md:relative md:top-0 absolute top-[-4em] right-0 w-[23em] md:w-[15em]">
               <Image src={man} alt="man" />
             </div>
           </div>
         </div>
-        <div className="pl-10 pt-20 cflexmm gap-5">
+        <div className="px-10 pt-20 md:px-5 cflexmm gap-5">
           <p className="font-bold text-4xl">My Projects</p>
           <div className="flexmm gap-7 flex-wrap pb-5">
             <motion.div

@@ -52,16 +52,16 @@ const Project4 = () => {
   ];
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b bg-black text-primary1">
-        <div className="cflexss pl-16 pr-10">
-          <div className="flexbm w-full gap-5">
-            <div className="cflexsm gap-5 w-1/3">
+      <div className="cflexms pt-32 bg-gradient-to-b bg-black text-primary1 md:pt-20">
+        <div className="cflexss px-10 md:p-5">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+            <div className="cflexsm gap-5 w-1/3 md:w-full">
               <Image src={enter} alt="enter" width="100%" height="100%" />
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-semibold cursor-pointer">
                 Visit
               </div>
             </div>
-            <div className="cflexss gap-4 w-2/3">
+            <div className="cflexss gap-4 w-2/3 md:w-full">
               <p className="font-bold text-6xl">ENTR</p>
               <p className="text-xl font-semibold">
                 Streamline your party planning, elevate your event’s experience
@@ -77,15 +77,15 @@ const Project4 = () => {
               </p>
             </div>
           </div>
-          <div className="cflexmm gap-7 pt-28 pb-32 ">
-            <p className="font-bold text-3xl capitalize">
+          <div className="cflexmm gap-7 pt-28 pb-32 w-full md:text-center">
+            <p className="font-bold text-3xl capitalize sm1:text-2xl">
               Elevate your event planning with our comprehensive add-on features
             </p>
-            <div className="flexmm gap-7 flex-wrap pb-5">
+            <div className="flexmm gap-7 flex-wrap pb-5 text-left">
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets bg-gradient-to-r from-secondary2-100 to-secondary2-200 w-[22em] flex-grow-0 flex-shrink">
+                    <div className="tickets bg-gradient-to-r from-secondary2-100 to-secondary2-200 w-[22em] md:w-[20em] flex-grow-0 flex-shrink">
                         <div className=" border-2 border-white rounded-2xl py-1 px-5">
                             <p>{ticket.title}</p>
                         </div>

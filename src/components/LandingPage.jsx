@@ -7,11 +7,12 @@ import Project2 from "./Project2";
 import Project3 from "./Project3";
 import Project4 from "./Project4";
 
+
 const LandingPage = () => {
   return (
     <>
-      <div className="font-sans w-[100vw]">
-        <Header />
+      <div className="absolute top-0 left-0 font-sans w-[100%]">
+        <Header />       
         <HeroSection />
         <About />
         <Mission />

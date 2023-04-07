@@ -1,21 +1,21 @@
 const About = () => {
   return (
     <>
-      <div className="flexbs py-24 pl-5 pr-20">
-        <div className="w-[35%] cflexss gap-20">
+      <div className="md:flex-col md:justify-start md:items-start flexbs py-24 md:py-10 pl-5 md:gap-10 md:px-5 pr-20">
+        <div className="w-[35%] cflexss gap-20 md:w-full md:gap-10 ">
           <p className="text-primary2 font-semibold text-4xl">
             Clarice Bonaccorsi
           </p>
           <div>
-            <p className="text-primary3 font-bold text-6xl">
+            <p className="text-primary3 font-bold text-6xl md:text-4xl">
               "Don't wait for opportunities, create them."{" "}
             </p>
-            <p className=" text-right pr-8 text-2xl">-unknown</p>
+            <p className=" text-right pr-8 text-2xl md:text-xl">-unknown</p>
           </div>
         </div>
-        <div className="w-[55%] cflexss gap-5">
+        <div className="w-[55%] cflexss gap-5 md:w-full">
           <div className="w-full">
-            <ul className="list-none flexbm text-2xl">
+            <ul className="list-none flexbm text-2xl flex-wrap">
               <li>Technology</li>
               <li>Finance</li>
               <li>Music</li>
@@ -45,7 +45,7 @@ const About = () => {
             my ability to overcome obstacles to establish successful businesses
             with a solid foundation.
           </p>
-          <div className="w-full flexmm gap-10 pt-5">
+          <div className="w-full flexmm gap-10 pt-5 md:text-center flex-wrap">
             <div className="text-[0.8rem] font-semibold cflexmm gap-3">
                 <p className="text-5xl font-bold">6+</p>
                 <p>Years of Experience</p>

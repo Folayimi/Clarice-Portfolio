@@ -5,16 +5,16 @@ import companies from "../Assets/companies.png"
 const Project3 = () => {
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1">
-        <div className="cflexss pl-16 pr-10">
-          <div className="flexbm w-full gap-5">
-            <div className="cflexsm gap-5 w-1/3">
+      <div className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20">
+        <div className="cflexss pl-16 pr-10 md:p-5">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+            <div className="cflexsm gap-5 w-1/3 md:w-full">
               <Image src={gogi} alt="gogi" width="100%" height="100%" />
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-semibold cursor-pointer">
                 Visit
               </div>
             </div>
-            <div className="cflexss gap-4 w-2/3">
+            <div className="cflexss gap-4 w-2/3 md:w-full">
               <p className="font-bold text-6xl">Gogi.ai</p>
               <p className="text-xl font-semibold">
                 Access exclusive fincincal tips, education and trading algos
@@ -34,8 +34,8 @@ const Project3 = () => {
               </p>
             </div>
           </div>
-          <div className="cflexmm gap-3 pt-28 pb-32 ">
-            <p className="font-bold text-4xl capitalize">Compatible with these platforms </p>
+          <div className="cflexmm gap-3 pt-28 pb-32 md:text-center w-full">
+            <p className="font-bold text-4xl capitalize md:text-3xl">Compatible with these platforms </p>
             <Image src={companies} alt="companies" />
           </div>
         </div>
