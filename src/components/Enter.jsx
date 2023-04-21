@@ -2,7 +2,7 @@ import Image from "next/image";
 import enter from "../Assets/enter.png";
 import companies from "../Assets/companies.png";
 
-const Project4 = ({ position }) => {
+const Enter = ({ position }) => {
   const Tickets = [
     {
       title: "ID Verification",
@@ -104,4 +104,4 @@ const Project4 = ({ position }) => {
     </>
   );
 };
-export default Project4;
+export default Enter;

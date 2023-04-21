@@ -2,7 +2,7 @@ import Image from "next/image";
 import gogi from "../Assets/gogi.png";
 import companies from "../Assets/companies.png";
 
-const Project3 = ({ position }) => {
+const RiskGames = ({ position }) => {
   return (
     <>
       <div
@@ -48,4 +48,4 @@ const Project3 = ({ position }) => {
     </>
   );
 };
-export default Project3;
+export default RiskGames;

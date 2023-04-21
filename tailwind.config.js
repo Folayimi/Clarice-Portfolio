@@ -15,7 +15,7 @@ module.exports = {
         primary4: "#9C9C9C",
         primary7: "#CB0000",
         primary8: "#0C4DF3",
-        primary9: "#1BD017",
+        primary9: "#5E00D6",
         secondary1: {
           100: "#1B4ED2 50%",
           200: "rgba(181, 65, 162, 0.93) 100%",

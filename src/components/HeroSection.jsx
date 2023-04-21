@@ -7,7 +7,7 @@ import Typewriter from "typewriter-effect";
 const HeroSection = ({position}) => {
   return (
     <>
-      <div ref={position} className="relative w-[100%] bg-black pt-28 md1:pt-20 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[43em] font-sans">
+      <div ref={position} className="relative w-[100%] bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[43em] font-sans">
         <div className="text-primary1 text-6xl md:text-5xl md1:text-3xl cflexss w-full gap-10 md1:gap-4 font-semibold">
           <div className="flexsm w-full md:w-[50%] md1:w-full">
             <p>Hey There,</p>

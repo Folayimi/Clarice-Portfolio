@@ -1,25 +1,35 @@
 import { ChevronDown, bar, X } from "heroicons-react";
 import { useState } from "react";
+import Image from "next/image";
+import facebook from "../Assets/facebook.png";
+import instagram from "../Assets/instagram.png";
+import twitter from "../Assets/twitter.png";
+import linkedIn from "../Assets/linkedln.png";
+import { useRouter } from "next/router";
 
-const Header = ({ scrollToRef, hm, abt, mis }) => {
+const Header = () => {
   const [margin, setMargin] = useState(-100);
+  const router = useRouter();
   return (
     <>
-      <div className="fixed top-0 left-0 text-primary1 flexbm z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
+      <div className="fixed top-0 left-0 text-primary1 flexbs z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
         <div
           style={{ right: `${margin}%` }}
           className="sm1:block fixed top-0 w-[60vw] pb-10 bg-white z-100 rounded-xl text-black transition-all duration-1000 ease-in-out hidden"
         >
           <div className="w-full flexem p-5">
-            <X size="30px" onClick={()=>{
-              setMargin(-100)
-            }}/>
+            <X
+              size="30px"
+              onClick={() => {
+                setMargin(-100);
+              }}
+            />
           </div>
           <ul className="cflexss px-5 gap-7 list-none text-primary2 font-bold text-xl">
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(hm);
+                router.push("/");
                 setMargin(-100);
               }}
             >
@@ -28,7 +38,7 @@ const Header = ({ scrollToRef, hm, abt, mis }) => {
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(abt);
+                router.push("/?page=about");
                 setMargin(-100);
               }}
             >
@@ -37,7 +47,7 @@ const Header = ({ scrollToRef, hm, abt, mis }) => {
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(mis);
+                router.push("/?page=mission");
                 setMargin(-100);
               }}
             >
@@ -49,13 +59,29 @@ const Header = ({ scrollToRef, hm, abt, mis }) => {
             <li className="cursor-pointer">Contact</li>
           </ul>
         </div>
-        <div className="font-bold text-3xl sm1:text-2xl">Clarice</div>
+        <div className="cflexss gap-2">
+          <p className="font-bold text-3xl sm1:text-2xl">Clarice</p>
+          <div className="flexmm gap-3">
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+              <Image src={facebook} alt="facebook" />
+            </div>
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+              <Image src={twitter} alt="twitter" />
+            </div>
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+              <Image src={instagram} alt="instagram" />
+            </div>
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+              <Image src={linkedIn} alt="linkedln" />
+            </div>
+          </div>
+        </div>
         <div className="sm1:hidden block">
           <ul className="flexmm gap-7 list-none text-primary2 font-normal text-sm">
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(hm);
+                router.push("/");
               }}
             >
               Home
@@ -63,7 +89,7 @@ const Header = ({ scrollToRef, hm, abt, mis }) => {
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(abt);
+                router.push("/?page=about");
               }}
             >
               About me
@@ -71,7 +97,7 @@ const Header = ({ scrollToRef, hm, abt, mis }) => {
             <li
               className="cursor-pointer"
               onClick={() => {
-                scrollToRef(mis);
+                router.push("/?page=mission");
               }}
             >
               Mission

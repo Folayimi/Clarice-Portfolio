@@ -3,7 +3,7 @@ const About = ({ position }) => {
     <>
       <div
         ref={position}
-        className="md:flex-col md:justify-start md:items-start flexbs py-24 md:py-20 pl-5 md:gap-10 md:px-5 pr-20"
+        className="md:flex-col md:justify-start md:items-start flexbs py-24 pl-5 md:gap-10 md:px-5 pr-20"
       >
         <div className="w-[35%] cflexss gap-20 md:w-full md:gap-10 ">
           <p className="text-primary2 font-semibold text-4xl">
