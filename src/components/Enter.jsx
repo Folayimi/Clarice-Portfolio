@@ -1,8 +1,7 @@
 import Image from "next/image";
-import enter from "../Assets/enter.png";
-import companies from "../Assets/companies.png";
+import enter1 from "../Assets/enter1.png";
 
-const Enter = ({ position }) => {
+const Enter = () => {
   const Tickets = [
     {
       title: "ID Verification",
@@ -52,14 +51,11 @@ const Enter = ({ position }) => {
   ];
   return (
     <>
-      <div
-        ref={position}
-        className="cflexms pt-32 bg-gradient-to-b bg-black text-primary1 md:pt-20"
-      >
+      <div className="cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20">
         <div className="cflexss px-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
-            <div className="cflexsm gap-5 w-1/3 md:w-full">
-              <Image src={enter} alt="enter" width="100%" height="100%" />
+            <div className="cflexsm gap-5 w-[8em] md:w-full">
+              <Image src={enter1} alt="enter" width="100%" height="100%" />
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-semibold cursor-pointer">
                 Visit
               </div>

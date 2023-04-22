@@ -2,13 +2,10 @@ import Image from "next/image";
 import big from "../Assets/big.png";
 import baloons from "../Assets/baloons.png";
 
-const Project2 = ({ position }) => {
+const Project2 = () => {
   return (
     <>
-      <div
-        ref={position}
-        className="cflexms pt-32 bg-gradient-to-b from-secondary2-100 to-secondary2-200 text-primary1 md:pt-20"
-      >
+      <div className="cflexms pt-32 bg-gradient-to-b from-secondary2-100 to-secondary2-200 text-primary1 md:pt-20">
         <div className="cflexss pl-16 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">

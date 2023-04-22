@@ -2,10 +2,10 @@ import Image from "next/image";
 import citron from "../Assets/citron.png";
 import giftbox from "../Assets/giftbox.jpg";
 
-const Citroom = ({ position }) => {
+const Citroom = () => {
   return (
     <>
-      <div ref={position} className="cflexms pt-32 md:pt-24">
+      <div className="cflexms pt-32 md:pt-24">
         <div className="cflexss pl-20 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">

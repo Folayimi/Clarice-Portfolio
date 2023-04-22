@@ -28,6 +28,10 @@ module.exports = {
           100: "#056ECF 0%",
           200: "#180878 65%",
         },
+        secondary4: {
+          100: "#030D21 0%",
+          200: "rgba(0, 1, 2, 0.94) 65%",
+        }
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
