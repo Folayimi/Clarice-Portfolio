@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Upload } from "heroicons-react";
+import FileBase64 from "react-file-base64";
 
 const Contact = () => {
   const [changing, setChanging] = useState(false);
@@ -75,6 +76,30 @@ const Contact = () => {
     },
   ];
 
+  const upload = (file) => {        
+    console.log(file)
+    // const userDetails =
+    //   type === "profile" ? { profilePicture: image } : { cover: image };
+    setUserDetails({ ...userDetails, file: file.base64 });
+    setChanging(!changing);
+    // services.api.userRequests
+    //   .updateUserProfile(userDetails)
+    //   .then((res) => {
+    //     setLoader(false);
+    //     if (type == "profile") {
+    //       setImageP(image);
+    //     } else if (type === "cover") {
+    //       setImageC(image);
+    //     }
+    //     localStorage.setItem("user", JSON.stringify(res.data));
+    //     services.toast.success("Uploaded Successfully");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     services.toast.error(error);
+    //   });
+  };
+
   const handleChange = (e) => {
     // var file = e.target.files[0];
     var name = e.target.name;
@@ -124,7 +149,16 @@ const Contact = () => {
                 <Upload />
                 <p>Upload Additional file</p>
               </div>
-              <div className="absolute "></div>
+              <div className="absolute opacity-0">
+                <FileBase64
+                  name="profilePicture"
+                  defaultValue={userDetails["profilePicture"]}
+                  multiple={false}
+                  onDone={(base64) => {
+                    upload(base64);
+                  }}
+                />
+              </div>
             </div>
             <p className="text-sm font-light">
               Attach file. File size of your documents should not exceed 10MB
