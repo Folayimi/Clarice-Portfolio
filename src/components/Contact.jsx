@@ -235,7 +235,7 @@ const Contact = () => {
         </form>
         <div className="cflexss gap-5 p-5 w-1/3 md:w-full">
           <p>Would you like to join our newsletter?</p>
-          <div className="flexss gap-5">
+          <div className="w-full flexbs gap-5">
             <input
               className="w-full pl-2 border-b-2 bg-transparent border-primary1 focus:outline-none"
               name="email"
@@ -252,7 +252,9 @@ const Contact = () => {
                   ? "flexmm w-[3em] h-[2em] bg-[#2931FB] p-2 cursor-pointer"
                   : "flexmm w-[3em] h-[2em] bg-[gray] opacity-50 p-2 cursor-pointer"
               }
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
+                setEmail("");
                 // HANDLE JOIN TO NEWSLETTER
               }}
             >
