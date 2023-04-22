@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Upload } from "heroicons-react";
 
 const Contact = () => {
   const [changing, setChanging] = useState(false);
@@ -84,10 +85,10 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  pt-32 px-10 bg-[#002FA8] text-primary1 md:pt-20">
+      <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  pt-32 px-10 bg-[#002FA8] text-primary1">
         <div className="cflexss gap-5 w-1/3 md:w-full">
           <p className="text-5xl font-bold">Get in touch,</p>
-          <p className="text-xl">
+          <p className="text-xl md: text-neutral-50">
             thank you for taking the time to go through my website. I am always
             excited to connect with like-minded individuals and expand my
             professional network. If you would like to connect with me, please
@@ -117,7 +118,18 @@ const Contact = () => {
               </>
             );
           })}
-          <input type="file" />
+          <div className="w-full">
+            <div className="relative flexmm w-full p-10 border-2 border-dotted border-white cursor-pointer">
+              <div className="flexmm gap-2">
+                <Upload />
+                <p>Upload Additional file</p>
+              </div>
+              <div className="absolute "></div>
+            </div>
+            <p className="text-sm font-light">
+              Attach file. File size of your documents should not exceed 10MB
+            </p>
+          </div>
         </form>
       </div>
     </>
