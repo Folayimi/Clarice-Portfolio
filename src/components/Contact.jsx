@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Upload } from "heroicons-react";
+import { Upload, Check } from "heroicons-react";
 import FileBase64 from "react-file-base64";
 
 const Contact = () => {
@@ -11,6 +11,7 @@ const Contact = () => {
   const [phoneError, setPhoneError] = useState(false);
   const [fileError, setFileError] = useState(false);
   const [valid, setValid] = useState(false);
+  const [email, setEmail] = useState("");
   const [userDetails, setUserDetails] = useState({
     companyName: "",
     natureOfBusiness: "",
@@ -118,7 +119,7 @@ const Contact = () => {
       setFileError(true);
     }
     setUserDetails({ ...userDetails, file: file.base64 });
-    setChanging(!changing);    
+    setChanging(!changing);
   };
 
   const handleChange = (e) => {
@@ -153,7 +154,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  pt-32 px-10 bg-[#002FA8] text-primary1">
+      <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  gap-10 md:gap-0 pt-32 px-10 bg-[#002FA8] text-primary1">
         <div className="cflexss gap-5 w-1/3 md:w-full">
           <p className="text-5xl md:text-4xl font-bold">Get in touch,</p>
           <p className="text-xl md:text-sm">
@@ -232,6 +233,33 @@ const Contact = () => {
             SUBMIT
           </button>
         </form>
+        <div className="cflexss gap-5 p-5 w-1/3 md:w-full">
+          <p>Would you like to join our newsletter?</p>
+          <div className="flexss gap-5">
+            <input
+              className="w-full pl-2 border-b-2 bg-transparent border-primary1 focus:outline-none"
+              name="email"
+              type="text"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <div
+              className={
+                EMAIL_REGEX.test(email)
+                  ? "flexmm w-[3em] h-[2em] bg-[#2931FB] p-2 cursor-pointer"
+                  : "flexmm w-[3em] h-[2em] bg-[gray] opacity-50 p-2 cursor-pointer"
+              }
+              onClick={() => {
+                // HANDLE JOIN TO NEWSLETTER
+              }}
+            >
+              <Check />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
