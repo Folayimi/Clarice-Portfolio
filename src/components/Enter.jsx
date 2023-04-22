@@ -5,6 +5,12 @@ import b2 from "../Assets/b2.png";
 import b3 from "../Assets/b3.png";
 import star from "../Assets/star.png";
 import loc from "../Assets/loc.png";
+import f1 from "../Assets/f1.png";
+import f2 from "../Assets/f2.png";
+import f3 from "../Assets/f3.png";
+import f4 from "../Assets/f4.png";
+import f5 from "../Assets/f5.png";
+import f6 from "../Assets/f6.png";
 
 const Enter = () => {
   const Events = [
@@ -19,59 +25,58 @@ const Enter = () => {
     },
     {
       img: b2,
-      title: "Party CleanUp Inc",
-      content:
-        "20 years+ of experience cleaning venues and homes. We are fit to service any...",
+      title: "Venue MAX",
+      content: "Book a venue with us for a max experience at your next event.",
       star: star,
       loc: loc,
-      type: "Cleaning",
+      type: "Venues",
+    },
+    {
+      img: b3,
+      title: "Party Rentals LLC",
+      content:
+        "Offering the most popular party rentals in the city, ready to serve the Los Angeles area...",
+      star: star,
+      loc: loc,
+      type: "Rentals",
     },
   ];
   const Tickets = [
     {
+      img: f1,
+      title: "NoN-Disclosure",
+      content:
+        "Protect sensitive information by requiring guests to sign E-NDAs before entering event.",
+    },
+    {
+      img: f2,
       title: "ID Verification",
       content:
         "Verify the identity of your guests to ensure a secure and controlled event experience",
     },
     {
+      img: f3,
       title: "Doc-sign",
       content:
         "Streamline the signing process by allowing guests to digitally sign important documents related to your event.",
     },
     {
-      title: "Fundraising",
+      img: f4,
+      title: "Raffles",
       content:
-        "Raise money for your cause with our built-in fundraiser tools, including donation tracking and goal setting.",
+        "Create and manage raffles for your event, complete with winning number generation.",
     },
     {
-      title: "Auction",
-      content:
-        "Add an exciting element to your event with our auction fearure, including sales tracking and winner selection.",
-    },
-    {
-      title: "Ticket Customization",
-      content:
-        "Create unique, professional-looking tickets, including pre-made themes and different ticket types.",
-    },
-    {
+      img: f5,
       title: "Doc-Upload",
       content:
         "Allow your guests to upload documents and easily keep record of the uploads",
     },
     {
-      title: "Covid-19-Vaccination",
+      img: f6,
+      title: "Fundraising",
       content:
-        "Keep your gurests and event staff safe by verifying Covid-19 vaccination status online.",
-    },
-    {
-      title: "Non-Disclosure Agreements",
-      content:
-        "Protect sensitive information by requiring guests to sign NDAs before entering event.",
-    },
-    {
-      title: "NFT",
-      content:
-        "Easily upload and share important documents related to your event with gurests and organizers.",
+        "Raise money for your cause with our built-in fundraiser tools, including donation tracking and goal setting.",
     },
   ];
   return (
@@ -112,14 +117,16 @@ const Enter = () => {
               {Events.map((event) => {
                 return (
                   <>
-                    <div className="tickets w-[30em] md:w-[20em] flex-grow-0 flex-shrink">
+                    <div className="tickets w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
                       <div className="w-[15em]">
                         <Image src={event.img} />
                       </div>
-                      <div className="cflexss gap-3">
+                      <div className="cflexss gap-1">
                         <p className="text-2xl">{event.title}</p>
                         <div>
-                          <p className="text-sm text-[#A4A4AA]">{event.content}</p>
+                          <p className="text-sm text-[#A4A4AA]">
+                            {event.content}
+                          </p>
                           <Image src={event.star} />
                         </div>
                         <div className="flexsm gap-2">
@@ -142,11 +149,18 @@ const Enter = () => {
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets w-[22em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div className=" border-2 border-white rounded-2xl py-1 px-5">
-                        <p>{ticket.title}</p>
+                    <div className="tickets p-3 w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
+                      <div className="w-[10em]">
+                        <Image src={ticket.img} />
                       </div>
-                      <p className="text-sm">{ticket.content}</p>
+                      <div className="cflexss gap-1">
+                        <p className="text-2xl">{ticket.title}</p>
+                        <div>
+                          <p className="text-sm text-[#A4A4AA]">
+                            {ticket.content}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </>
                 );
