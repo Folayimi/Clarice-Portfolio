@@ -76,10 +76,7 @@ const Contact = () => {
     },
   ];
 
-  const upload = (file) => {        
-    console.log(file)
-    // const userDetails =
-    //   type === "profile" ? { profilePicture: image } : { cover: image };
+  const upload = (file) => {          
     setUserDetails({ ...userDetails, file: file.base64 });
     setChanging(!changing);
     // services.api.userRequests
