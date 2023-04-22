@@ -31,7 +31,7 @@ const Contact = () => {
       userDetails["address"].trim().length > 0 &&
       userDetails["postCode"].trim().length > 0 &&
       userDetails["contactName"].trim().length > 0 &&
-      PHONE_REGEX.test(userDetails["email"].trim()) &&
+      PHONE_REGEX.test(userDetails["contactPhone"].trim()) &&
       EMAIL_REGEX.test(userDetails["email"].trim()) &&
       userDetails["likedIn"].trim().length > 0 &&
       userDetails["idea"].trim().length > 0
@@ -118,27 +118,10 @@ const Contact = () => {
       setFileError(true);
     }
     setUserDetails({ ...userDetails, file: file.base64 });
-    setChanging(!changing);
-    // services.api.userRequests
-    //   .updateUserProfile(userDetails)
-    //   .then((res) => {
-    //     setLoader(false);
-    //     if (type == "profile") {
-    //       setImageP(image);
-    //     } else if (type === "cover") {
-    //       setImageC(image);
-    //     }
-    //     localStorage.setItem("user", JSON.stringify(res.data));
-    //     services.toast.success("Uploaded Successfully");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     services.toast.error(error);
-    //   });
+    setChanging(!changing);    
   };
 
   const handleChange = (e) => {
-    // var file = e.target.files[0];
     var name = e.target.name;
     var value = e.target.value;
     setUserDetails({ ...userDetails, [name]: value });
@@ -146,7 +129,23 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (valid) {
+      setValid(false);
+      setUserDetails({
+        ...userDetails,
+        companyName: "",
+        natureOfBusiness: "",
+        address: "",
+        postCode: "",
+        contactName: "",
+        contactPhone: "",
+        email: "",
+        likedIn: "",
+        idea: "",
+        file: "",
+      });
+      console.log("submitted");
       // SAVE AND UPDATE USER DETAILS ENDPOINT
       return;
     }
@@ -156,8 +155,8 @@ const Contact = () => {
     <>
       <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  pt-32 px-10 bg-[#002FA8] text-primary1">
         <div className="cflexss gap-5 w-1/3 md:w-full">
-          <p className="text-5xl font-bold">Get in touch,</p>
-          <p className="text-xl md: text-neutral-50">
+          <p className="text-5xl md:text-4xl font-bold">Get in touch,</p>
+          <p className="text-xl md:text-sm">
             thank you for taking the time to go through my website. I am always
             excited to connect with like-minded individuals and expand my
             professional network. If you would like to connect with me, please
@@ -165,7 +164,10 @@ const Contact = () => {
             discuss any opportunities or questions you may have about business.
           </p>
         </div>
-        <form className="cflexss w-1/3 md:w-full gap-10 py-10">
+        <form
+          className="cflexss w-1/3 md:w-full gap-10 py-10"
+          onSubmit={handleSubmit}
+        >
           {Fields.map((field) => {
             return (
               <>
@@ -174,6 +176,7 @@ const Contact = () => {
                     className="w-full pl-5 border-b-2 bg-transparent border-primary1 focus:outline-none"
                     name={field.name}
                     type={field.type}
+                    value={userDetails[field.name]}
                     placeholder={field.placeHolder}
                     required={field.required}
                     onChange={handleChange}
@@ -218,6 +221,16 @@ const Contact = () => {
               Attach file. File size of your documents should not exceed 10MB
             </p>
           </div>
+          <button
+            type="submit"
+            className={
+              valid
+                ? "w-full py-3 px-5 bg-[#8B04CB] font-semibold cursor-pointer"
+                : "w-full py-3 px-5 bg-[gray] font-semibold cursor-pointer"
+            }
+          >
+            SUBMIT
+          </button>
         </form>
       </div>
     </>
