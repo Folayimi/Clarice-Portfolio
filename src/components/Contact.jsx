@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Upload } from "heroicons-react";
 import FileBase64 from "react-file-base64";
 
 const Contact = () => {
+  const EMAIL_REGEX = /^(\w+)([\.\-]?\w+)*\@(\w+)([\.\-]?\w+)*(\.[a-z|A-Z]+)$/;
+  const PHONE_REGEX =
+    /^([+]?[(]?[0-9]{1,3}?[)]?)?\(?([0-9]{3,4})\)?[\-\.\ ]?([0-9]{3,4})[\-\.\ ]?([0-9]{4})$/;
   const [changing, setChanging] = useState(false);
-  const [error, setError] = useState(true);
+  const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
+  const [fileError, setFileError] = useState(false);
   const [valid, setValid] = useState(false);
   const [userDetails, setUserDetails] = useState({
     companyName: "",
@@ -18,6 +23,34 @@ const Contact = () => {
     idea: "",
     file: "",
   });
+
+  useEffect(() => {
+    if (
+      userDetails["companyName"].trim().length > 0 &&
+      userDetails["natureOfBusiness"].trim().length > 0 &&
+      userDetails["address"].trim().length > 0 &&
+      userDetails["postCode"].trim().length > 0 &&
+      userDetails["contactName"].trim().length > 0 &&
+      PHONE_REGEX.test(userDetails["email"].trim()) &&
+      EMAIL_REGEX.test(userDetails["email"].trim()) &&
+      userDetails["likedIn"].trim().length > 0 &&
+      userDetails["idea"].trim().length > 0
+    ) {
+      setValid(true);
+    } else {
+      setValid(false);
+    }
+    if (!EMAIL_REGEX.test(userDetails["email"].trim())) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+    }
+    if (!PHONE_REGEX.test(userDetails["contactPhone"].trim())) {
+      setPhoneError(true);
+    } else {
+      setPhoneError(false);
+    }
+  }, [changing]);
 
   const Fields = [
     {
@@ -76,7 +109,14 @@ const Contact = () => {
     },
   ];
 
-  const upload = (file) => {          
+  const upload = (file) => {
+    if (file.size <= 10240) {
+      setUserDetails({ ...userDetails, file: file.base64 });
+      setFileError(false);
+      setChanging(!changing);
+    } else {
+      setFileError(true);
+    }
     setUserDetails({ ...userDetails, file: file.base64 });
     setChanging(!changing);
     // services.api.userRequests
@@ -105,6 +145,13 @@ const Contact = () => {
     setChanging(!changing);
   };
 
+  const handleSubmit = (e) => {
+    if (valid) {
+      // SAVE AND UPDATE USER DETAILS ENDPOINT
+      return;
+    }
+  };
+
   return (
     <>
       <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  pt-32 px-10 bg-[#002FA8] text-primary1">
@@ -131,9 +178,14 @@ const Contact = () => {
                     required={field.required}
                     onChange={handleChange}
                   />
-                  {field.name === "email" && error && (
+                  {field.name === "email" && emailError && (
                     <p className="text-red-900 text-sm">
                       Please, enter a valid email address
+                    </p>
+                  )}
+                  {field.name === "contactPhone" && phoneError && (
+                    <p className="text-red-900 text-sm">
+                      Please, enter a valid phone number
                     </p>
                   )}
                 </div>
@@ -149,7 +201,7 @@ const Contact = () => {
               <div className="absolute opacity-0">
                 <FileBase64
                   name="profilePicture"
-                  defaultValue={userDetails["profilePicture"]}
+                  defaultValue={userDetails["file"]}
                   multiple={false}
                   onDone={(base64) => {
                     upload(base64);
@@ -157,6 +209,11 @@ const Contact = () => {
                 />
               </div>
             </div>
+            {fileError && (
+              <p className="text-red-900 text-sm">
+                Can't accept files greater than 10mb.
+              </p>
+            )}
             <p className="text-sm font-light">
               Attach file. File size of your documents should not exceed 10MB
             </p>
