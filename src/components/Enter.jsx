@@ -1,7 +1,32 @@
 import Image from "next/image";
 import enter1 from "../Assets/enter1.png";
+import b1 from "../Assets/b1.png";
+import b2 from "../Assets/b2.png";
+import b3 from "../Assets/b3.png";
+import star from "../Assets/star.png";
+import loc from "../Assets/loc.png";
 
 const Enter = () => {
+  const Events = [
+    {
+      img: b1,
+      title: "Party CleanUp Inc",
+      content:
+        "20 years+ of experience cleaning venues and homes. We are fit to service any...",
+      star: star,
+      loc: loc,
+      type: "Cleaning",
+    },
+    {
+      img: b2,
+      title: "Party CleanUp Inc",
+      content:
+        "20 years+ of experience cleaning venues and homes. We are fit to service any...",
+      star: star,
+      loc: loc,
+      type: "Cleaning",
+    },
+  ];
   const Tickets = [
     {
       title: "ID Verification",
@@ -62,7 +87,7 @@ const Enter = () => {
             </div>
             <div className="cflexss gap-4 w-2/3 md:w-full">
               <p className="font-bold text-6xl">ENTR</p>
-              <p className="text-4xl font-semibold capitalize">
+              <p className="text-4xl md:text-3xl font-semibold capitalize">
                 Streamline your party planning, elevate your event’s experience
               </p>
               <p className="text-sm">
@@ -80,7 +105,37 @@ const Enter = () => {
             </div>
           </div>
           <div className="cflexmm gap-7 pt-28 pb-32 w-full md:text-center">
-            <p className="font-bold text-2xl capitalize sm1:text-2xl">
+            <p className="font-bold text-2xl sm1:text-2xl">
+              Book and manage event services,
+            </p>
+            <div className="flexmm gap-7 flex-wrap pb-5 text-left">
+              {Events.map((event) => {
+                return (
+                  <>
+                    <div className="tickets w-[30em] md:w-[20em] flex-grow-0 flex-shrink">
+                      <div className="w-[15em]">
+                        <Image src={event.img} />
+                      </div>
+                      <div className="cflexss gap-3">
+                        <p className="text-2xl">{event.title}</p>
+                        <div>
+                          <p className="text-sm text-[#A4A4AA]">{event.content}</p>
+                          <Image src={event.star} />
+                        </div>
+                        <div className="flexsm gap-2">
+                          <Image src={event.loc} />
+                          <p className="text-xl text-[#A4A4AA]">{event.type}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="cflexmm gap-7 pb-32 w-full md:text-center">
+            <p className="font-bold text-2xl sm1:text-2xl">
               Elevate your event planning with our comprehensive add-on features
             </p>
             <div className="flexmm gap-7 flex-wrap pb-5 text-left">
