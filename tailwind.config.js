@@ -32,6 +32,10 @@ module.exports = {
         secondary4: {
           100: "#030D21 0%",
           200: "rgba(0, 1, 2, 0.94) 65%",
+        },
+        secondary5: {
+          100: "#5E00D6 0%",
+          200: "rgba(0, 25, 250, 0.24) 0%",
         }
       },
       fontFamily: {

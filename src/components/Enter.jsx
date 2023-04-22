@@ -81,12 +81,12 @@ const Enter = () => {
   ];
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20">
+      <div className="w-full cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20">
         <div className="cflexss px-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
-            <div className="cflexsm gap-5 w-[8em] md:w-[2/3]">
+            <div className="cflexsm ml-14 md:ml-0 gap-5 w-[8em] md:w-[2/3]">
               <Image src={enter1} alt="enter" width="100%" height="100%" />
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-semibold cursor-pointer">
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-extrabold cursor-pointer hover:text-primary1 hover:bg-black hover:font-extrabold transition-colors duration-300">
                 Visit
               </div>
             </div>
@@ -113,12 +113,12 @@ const Enter = () => {
             <p className="font-bold text-2xl sm1:text-2xl">
               Book and manage event services,
             </p>
-            <div className="flexmm gap-7 flex-wrap pb-5 text-left">
+            <div className="flexmm w-full gap-7 flex-wrap pb-5 text-left">
               {Events.map((event) => {
                 return (
                   <>
                     <div className="tickets w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div className="w-[15em]">
+                      <div className="w-[15em] md:w-full">
                         <Image src={event.img} />
                       </div>
                       <div className="cflexss gap-1">
@@ -150,7 +150,7 @@ const Enter = () => {
                 return (
                   <>
                     <div className="tickets p-3 w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div className="w-[10em]">
+                      <div className="w-[10em] md:w-full">
                         <Image src={ticket.img} />
                       </div>
                       <div className="cflexss gap-1">

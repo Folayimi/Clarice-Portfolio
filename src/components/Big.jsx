@@ -10,7 +10,7 @@ const Project2 = () => {
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
               <Image src={big} alt="big" width="100%" height="100%" />
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-semibold cursor-pointer">
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-bold cursor-pointer hover:text-primary1 hover:bg-black hover:font-extrabold transition-colors duration-300">
                 Visit
               </div>
             </div>
