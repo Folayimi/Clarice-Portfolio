@@ -86,7 +86,7 @@ const Enter = () => {
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm ml-14 md:ml-0 gap-5 w-[8em] md:w-[2/3]">
               <Image src={enter1} alt="enter" width="100%" height="100%" />
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-extrabold cursor-pointer hover:text-primary1 hover:bg-black hover:font-extrabold transition-colors duration-300">
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-extrabold cursor-pointer hover:text-primary1 hover:border-2 hover:border-primary1 hover:bg-black hover:font-extrabold transition-colors duration-300">
                 Visit
               </div>
             </div>

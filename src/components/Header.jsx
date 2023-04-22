@@ -56,7 +56,15 @@ const Header = () => {
             <li className="cursor-pointer flexmm">
               Companies <ChevronDown />
             </li>
-            <li className="cursor-pointer">Contact</li>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                router.push("/contact");
+                setMargin(-100);
+              }}
+            >
+              Contact
+            </li>
           </ul>
         </div>
         <div className="cflexss gap-2">
@@ -105,7 +113,14 @@ const Header = () => {
             <li className="cursor-pointer flexmm">
               Companies <ChevronDown />
             </li>
-            <li className="cursor-pointer">Contact</li>
+            <li
+              className="cursor-pointer"
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
+              Contact
+            </li>
           </ul>
         </div>
         <div
