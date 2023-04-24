@@ -9,8 +9,10 @@ const Citroom = () => {
         <div className="cflexss pl-20 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
-              <Image src={citron} alt="citron" />
-              <div className="bg-black rounded-3xl py-2 px-5 text-primary1 font-semibold cursor-pointer hover:text-black hover:bg-primary1 border-2 hover:font-extrabold hover:border-black transition-colors duration-300">
+              <div className="flexmm w-[25em] md:w-[20em]">
+                <Image src={citron} alt="citron" width="100%" height="100%"/>
+              </div>
+              <div className="bg-black rounded-3xl py-2 px-5 text-primary1 cursor-pointer hover:text-black hover:bg-primary1 border-2 hover:border-black transition-colors duration-500">
                 Visit
               </div>
             </div>

@@ -31,7 +31,7 @@ const About = ({ position }) => {
             developed a love for innovation, which led to my engagement in the
             tech and financial industries.
           </p>
-          <p className="text-1xl text-primary4 font-semibold">
+          <p className="text-sm text-primary4 font-normal">
             As an experienced visionary and project manager with a diverse skill
             set, I have successfully executed projects in a range of sectors,
             including blockchain, trading algorithms, music, artist development
@@ -40,7 +40,7 @@ const About = ({ position }) => {
             the world, leveraging my entrepreneurial background and
             brand-building expertise.
           </p>
-          <p className="text-1xl text-primary4 font-semibold">
+          <p className="text-sm text-primary4 font-normal">
             Born in Italy and raised in Michigan,  I acquired a passion for
             business at a young age. As I embarked on my career, I relocated to
             Los Angeles to collaborate with various teams and optimize project

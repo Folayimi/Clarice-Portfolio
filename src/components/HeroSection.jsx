@@ -43,7 +43,7 @@ const HeroSection = ({position}) => {
         <div className="flexmm cursor-pointer">
           <ChevronDown color="white" size="100px" />
         </div>
-        <div className="absolute bottom-0 left-16 w-[48%] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
+        <div className="absolute bottom-0 left-16 w-[45em] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
           <Image src={person} width="100%" height="100%" />
         </div>
       </div>

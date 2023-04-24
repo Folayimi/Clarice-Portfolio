@@ -67,19 +67,26 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="cflexss gap-2">
-          <p className="font-bold text-3xl sm1:text-2xl">Clarice</p>
+        <div className="flexsm gap-5">
+          <p
+            className="font-bold text-3xl sm1:text-2xl cursor-pointer"
+            onClick={() => {
+              router.push("/");              
+            }}
+          >
+            Clarice
+          </p>
           <div className="flexmm gap-3">
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={facebook} alt="facebook" />
             </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={twitter} alt="twitter" />
             </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={instagram} alt="instagram" />
             </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black">
+            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={linkedIn} alt="linkedln" />
             </div>
           </div>

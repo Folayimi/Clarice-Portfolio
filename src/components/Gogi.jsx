@@ -9,8 +9,10 @@ const Gogi = () => {
         <div className="cflexss pl-16 pr-10 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
-              <Image src={gogi} alt="gogi" width="100%" height="100%" />
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black font-extrabold cursor-pointer hover:text-primary1 hover:bg-black hover:font-extrabold transition-colors duration-300">
+              <div className="flexmm w-[16em] md:w-[12em]">
+                <Image src={gogi} alt="gogi" width="100%" height="100%" />
+              </div>              
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-300">
                 Visit
               </div>
             </div>

@@ -69,8 +69,8 @@ const Mission = ({ position }) => {
           <div className="flexmm gap-7 flex-wrap pb-5">
             <motion.div
               className="card bg-primary1"
-              whileHover={{ y: -20 }}
-              transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
                 router.push("/citroom");
               }}
@@ -81,8 +81,8 @@ const Mission = ({ position }) => {
             </motion.div>
             <motion.div
               className="card bg-primary7"
-              whileHover={{ y: -20 }}
-              transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
                 router.push("/big");
               }}
@@ -93,8 +93,8 @@ const Mission = ({ position }) => {
             </motion.div>
             <motion.div
               className="card bg-black"
-              whileHover={{ y: -20 }}
-              transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
                 router.push("/enter");
               }}
@@ -106,8 +106,8 @@ const Mission = ({ position }) => {
             </motion.div>
             <motion.div
               className="card bg-primary8"
-              whileHover={{ y: -20 }}
-              transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
                 router.push("/gogi");
               }}
@@ -119,8 +119,8 @@ const Mission = ({ position }) => {
             </motion.div>
             <motion.div
               className="card bg-primary9 p-2"
-              whileHover={{ y: -20 }}
-              transition={{ type: "spring", stiffness: 500, damping: 5 }}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
                 router.push("/riskgames");
               }}
