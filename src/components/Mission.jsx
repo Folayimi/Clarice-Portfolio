@@ -99,7 +99,7 @@ const Mission = ({ position }) => {
                 router.push("/enter");
               }}
             >
-              <div className="w-[4em]">
+              <div className="w-[3em]">
                 <Image src={enter} alt="enter" width="100%" height="100%" />
               </div>
               <p className="text-4xl font-bold">ENTR</p>
