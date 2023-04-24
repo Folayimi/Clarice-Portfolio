@@ -15,7 +15,7 @@ const Header = () => {
       <div className="fixed top-0 left-0 text-primary1 flexbs z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
         <div
           style={{ right: `${margin}%` }}
-          className="sm1:block fixed top-0 w-[60vw] pb-10 bg-white z-100 rounded-xl text-black transition-all duration-1000 ease-in-out hidden"
+          className="sm1:block fixed top-0 w-[60vw] pb-10 bg-white z-100 text-black border-2 border-black transition-all duration-1000 ease-in-out hidden"
         >
           <div className="w-full flexem p-5">
             <X
@@ -26,8 +26,8 @@ const Header = () => {
             />
           </div>
           <ul className="cflexss px-5 gap-7 list-none text-primary2 font-bold text-xl">
-            <li
-              className="cursor-pointer"
+            <li              
+              className="cursor-pointer "
               onClick={() => {
                 router.push("/");
                 setMargin(-100);
