@@ -22,7 +22,7 @@ const LandingPage = ({ page }) => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 font-sans">
+      <div className="absolute top-0 w-full left-0 font-sans">
         <HeroSection position={homeRef}/>
         <About position={aboutRef}/>
         <Mission position={missionRef}/>
