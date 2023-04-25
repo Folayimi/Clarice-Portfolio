@@ -72,7 +72,7 @@ const Mission = ({ position }) => {
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 200, damping: 8 }}
               onClick={() => {
-                router.push("/citroom");
+                router.push("/giftroom");
               }}
             >
               <div>

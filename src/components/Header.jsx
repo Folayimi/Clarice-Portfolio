@@ -5,7 +5,7 @@ import {
   UserCircleOutline,
   PencilOutline,
   PhoneOutline,
-  MenuOutline
+  MenuOutline,
 } from "heroicons-react";
 import { useState } from "react";
 import Image from "next/image";
@@ -17,13 +17,14 @@ import { useRouter } from "next/router";
 
 const Header = () => {
   const [margin, setMargin] = useState(-100);
+  const [show, setShow] = useState("hidden");
   const router = useRouter();
   return (
     <>
       <div className="fixed top-0 left-0 text-primary1 flexbs z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
         <div
           style={{ right: `${margin}%` }}
-          className="sm1:block fixed top-0 w-[60vw] pb-10 bg-white z-100 text-black border-2 border-black transition-all duration-1000 ease-in-out hidden"
+          className="sm1:block fixed top-0 w-[65vw] pb-10 bg-white z-100 text-black border-2 border-black transition-all duration-1000 ease-in-out hidden"
         >
           <div className="w-full flexem p-5">
             <X
@@ -40,7 +41,7 @@ const Header = () => {
                 router.push("/");
                 setMargin(-100);
               }}
-            >              
+            >
               <HomeOutline size="30px" color="black" />
               Home
             </li>
@@ -64,9 +65,18 @@ const Header = () => {
               <PencilOutline size="30px" color="black" />
               Mission
             </li>
-            <li className="cursor-pointer flexmm gap-3">
-              <HomeOutline size="30px" color="black" /> Companies{" "}
-              <ChevronDown />
+            <li className="cflexsmd gap-2">
+              <div className="cursor-pointer flexmm gap-3">
+                <HomeOutline size="30px" color="black" /> Companies{" "}
+                <ChevronDown />
+              </div>
+              <ul >
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
             </li>
             <li
               className="cursor-pointer flexmm gap-3"
@@ -130,8 +140,72 @@ const Header = () => {
             >
               Mission
             </li>
-            <li className="cursor-pointer flexmm">
-              Companies <ChevronDown />
+            <li className="relative cursor-pointer cflexmm">
+              <div
+                className="flexmm"
+                onClick={() => {
+                  if (show === "hidden") {
+                    setShow("block");
+                  } else {
+                    setShow("hidden");
+                  }
+                }}
+              >
+                Companies <ChevronDown />
+              </div>
+              <ul
+                className={
+                  show === "hidden"
+                    ? "hidden"
+                    : "block absolute top-[3em] w-[10em] h-[18em] rounded-sm cflexss gap-[1em] bg-white p-2"
+                }
+              >
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/giftroom");
+                    setShow("hidden");
+                  }}
+                >
+                  GiftRoom
+                </li>
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/big");
+                    setShow("hidden");
+                  }}
+                >
+                  Big
+                </li>
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/enter");
+                    setShow("hidden");
+                  }}
+                >
+                  ENTR
+                </li>
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/gogi");
+                    setShow("hidden");
+                  }}
+                >
+                  Gogi
+                </li>
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/riskgames");
+                    setShow("hidden");
+                  }}
+                >
+                  RiskGames
+                </li>
+              </ul>
             </li>
             <li
               className="cursor-pointer"
@@ -149,7 +223,7 @@ const Header = () => {
             setMargin(0);
           }}
         >
-          <MenuOutline color="white" size="35px"/>          
+          <MenuOutline color="white" size="35px" />
         </div>
       </div>
     </>
