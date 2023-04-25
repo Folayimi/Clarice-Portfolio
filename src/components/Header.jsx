@@ -34,7 +34,7 @@ const Header = () => {
               }}
             />
           </div>
-          <ul className="cflexss px-5 gap-7 list-none text-primary2 font-bold text-xl">
+          <ul className="cflexss px-5 gap-7 list-none text-primary2 text-xl">
             <li
               className="cursor-pointer flexmm gap-3"
               onClick={() => {
@@ -66,16 +66,76 @@ const Header = () => {
               Mission
             </li>
             <li className="cflexsmd gap-2">
-              <div className="cursor-pointer flexmm gap-3">
+              <div
+                className="cursor-pointer flexmm gap-3"
+                onClick={() => {
+                  if (show === "hidden") {
+                    setShow("block");
+                  } else {
+                    setShow("hidden");
+                  }
+                }}
+              >
                 <HomeOutline size="30px" color="black" /> Companies{" "}
                 <ChevronDown />
               </div>
-              <ul >
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+              <ul
+                className={
+                  show === "hidden"
+                    ? "hidden"
+                    : "block rounded-sm cflexss gap-[1em] bg-white pt-5 px-2"
+                }
+              >
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/giftroom");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  GiftRoom
+                </li>
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/big");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  Big
+                </li>
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/enter");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  ENTR
+                </li>
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/gogi");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  Gogi
+                </li>
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/riskgames");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  RiskGames
+                </li>
               </ul>
             </li>
             <li
