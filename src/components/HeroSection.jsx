@@ -38,13 +38,13 @@ const HeroSection = ({position}) => {
           </div>
         </div>
         <div className="absolute bottom-[12em] right-16 w-[5em]">
-          <Image src={hex} width="100%" height="100%" />
+          <Image src={hex} alt="Hex" width="100%" height="100%" />
         </div>
         <div className="flexmm cursor-pointer">
           <ChevronDown color="white" size="100px" />
         </div>
         <div className="absolute bottom-0 left-16 w-[45em] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
-          <Image src={person} width="100%" height="100%" />
+          <Image src={person} alt="person" width="100%" height="100%" />
         </div>
       </div>
     </>

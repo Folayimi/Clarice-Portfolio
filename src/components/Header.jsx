@@ -1,4 +1,11 @@
-import { ChevronDown, bar, X } from "heroicons-react";
+import {
+  ChevronDown,
+  X,
+  HomeOutline,
+  UserCircleOutline,
+  PencilOutline,
+  PhoneOutline,
+} from "heroicons-react";
 import { useState } from "react";
 import Image from "next/image";
 import facebook from "../Assets/facebook.png";
@@ -26,43 +33,48 @@ const Header = () => {
             />
           </div>
           <ul className="cflexss px-5 gap-7 list-none text-primary2 font-bold text-xl">
-            <li              
-              className="cursor-pointer "
+            <li
+              className="cursor-pointer flexmm gap-3"
               onClick={() => {
                 router.push("/");
                 setMargin(-100);
               }}
             >
+              <HomeOutline size="30px" color="black" />
               Home
             </li>
             <li
-              className="cursor-pointer"
+              className="cursor-pointer flexmm gap-3"
               onClick={() => {
                 router.push("/?page=about");
                 setMargin(-100);
               }}
             >
+              <UserCircleOutline size="30px" color="black" />
               About me
             </li>
             <li
-              className="cursor-pointer"
+              className="cursor-pointer flexmm gap-3"
               onClick={() => {
                 router.push("/?page=mission");
                 setMargin(-100);
               }}
             >
+              <PencilOutline size="30px" color="black" />
               Mission
             </li>
-            <li className="cursor-pointer flexmm">
-              Companies <ChevronDown />
+            <li className="cursor-pointer flexmm gap-3">
+              <HomeOutline size="30px" color="black" /> Companies{" "}
+              <ChevronDown />
             </li>
             <li
-              className="cursor-pointer"
+              className="cursor-pointer flexmm gap-3"
               onClick={() => {
                 router.push("/contact");
                 setMargin(-100);
               }}
             >
+              <PhoneOutline size="30px" color="black" />
               Contact
             </li>
           </ul>
@@ -71,7 +83,7 @@ const Header = () => {
           <p
             className="font-bold text-3xl sm1:text-2xl cursor-pointer"
             onClick={() => {
-              router.push("/");              
+              router.push("/");
             }}
           >
             Clarice
