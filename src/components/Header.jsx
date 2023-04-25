@@ -5,6 +5,7 @@ import {
   UserCircleOutline,
   PhoneOutline,
   MenuOutline,
+  GlobeAltOutline
 } from "heroicons-react";
 import { useState } from "react";
 import Image from "next/image";
@@ -67,7 +68,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="black"
-                className="w-6 h-6"
+                className="w-7 h-7"
               >
                 <path
                   strokeLinecap="round"
@@ -88,7 +89,7 @@ const Header = () => {
                   }
                 }}
               >
-                <HomeOutline size="30px" color="black" /> Companies{" "}
+                <GlobeAltOutline size="30px" color="black" /> Companies{" "}
                 <ChevronDown />
               </div>
               <ul
