@@ -82,13 +82,13 @@ const Enter = () => {
   return (
     <>
       <div className="w-full cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20">
-        <div className="cflexss px-10 md:p-5">
+        <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
-            <div className="cflexsm ml-14 md:ml-0 gap-5 w-1/3 md:w-full">
-              <div className="flexmm w-[14em] md:w-[10em]">
+            <div className="cflexsm gap-5 w-1/3 md:w-full">
+              <div className="flexmm w-[10em] md:w-[8em]">
                 <Image src={enter1} alt="enter" width="100%" height="100%" />
               </div>              
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:border-2 hover:border-primary1 hover:bg-black transition-colors duration-300">
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 border-2 hover:border-primary1 hover:bg-black transition-colors duration-300">
                 Visit
               </div>
             </div>

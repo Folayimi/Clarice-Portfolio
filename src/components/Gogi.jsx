@@ -6,7 +6,7 @@ const Gogi = () => {
   return (
     <>
       <div className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20">
-        <div className="cflexss pl-16 pr-10 md:p-5">
+        <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
               <div className="flexmm w-[16em] md:w-[12em]">

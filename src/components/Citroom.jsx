@@ -6,7 +6,7 @@ const Citroom = () => {
   return (
     <>
       <div className="cflexms pt-32 md:pt-24">
-        <div className="cflexss pl-20 pr-10 md:p-5">
+        <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
               <div className="flexmm w-[25em] md:w-[20em]">

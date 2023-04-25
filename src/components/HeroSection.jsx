@@ -1,13 +1,13 @@
 import Image from "next/image";
 import person from "../Assets/person.png";
 import hex from "../Assets/hex.png"
-import { ChevronDown } from "heroicons-react";
+import { FaChevronDown } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
 
 const HeroSection = ({position}) => {
   return (
     <>
-      <div ref={position} className="relative w-[100%] bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[43em] font-sans">
+      <div ref={position} className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans">
         <div className="text-primary1 text-6xl md:text-5xl md1:text-3xl cflexss w-full gap-10 md1:gap-4 font-semibold">
           <div className="flexsm w-full md:w-[50%] md1:w-full">
             <p>Hey There,</p>
@@ -24,7 +24,7 @@ const HeroSection = ({position}) => {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("I am an entrepreneur")                                                    
+                    .typeString("I am an entrepreneur,")                                                    
                     .pauseFor(1000)
                     .typeString(" visionary, innovator")
                     .pauseFor(1000)
@@ -38,13 +38,13 @@ const HeroSection = ({position}) => {
           </div>
         </div>
         <div className="absolute bottom-[12em] right-16 w-[5em]">
-          <Image src={hex} width="100%" height="100%" />
+          <Image src={hex} alt="Hex" width="100%" height="100%" />
         </div>
         <div className="flexmm cursor-pointer">
-          <ChevronDown color="white" size="100px" />
+          <FaChevronDown color="white" size="60px" />
         </div>
         <div className="absolute bottom-0 left-16 w-[45em] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
-          <Image src={person} width="100%" height="100%" />
+          <Image src={person} alt="person" width="100%" height="100%" />
         </div>
       </div>
     </>
