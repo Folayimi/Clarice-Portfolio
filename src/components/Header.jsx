@@ -1,4 +1,4 @@
-import { ChevronDown, bar, X } from "heroicons-react";
+import { ChevronDown, X, HomeOutline, UserCircleOutline } from "heroicons-react";
 import { useState } from "react";
 import Image from "next/image";
 import facebook from "../Assets/facebook.png";
@@ -33,6 +33,7 @@ const Header = () => {
                 setMargin(-100);
               }}
             >
+              <HomeOutline size="30px" />
               Home
             </li>
             <li
