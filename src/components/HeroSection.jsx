@@ -1,7 +1,7 @@
 import Image from "next/image";
 import person from "../Assets/person.png";
 import hex from "../Assets/hex.png"
-import { ChevronDown } from "heroicons-react";
+import { FaChevronDown } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
 
 const HeroSection = ({position}) => {
@@ -41,7 +41,7 @@ const HeroSection = ({position}) => {
           <Image src={hex} alt="Hex" width="100%" height="100%" />
         </div>
         <div className="flexmm cursor-pointer">
-          <ChevronDown color="white" size="100px" />
+          <FaChevronDown color="white" size="60px" />
         </div>
         <div className="absolute bottom-0 left-16 w-[45em] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
           <Image src={person} alt="person" width="100%" height="100%" />
