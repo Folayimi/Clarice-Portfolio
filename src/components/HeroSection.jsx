@@ -8,9 +8,11 @@ import Script from "next/script";
 
 const HeroSection = ({ position }) => {
   const vantaRef = useRef(null);
+  let vantaEffect = useRef(null);
+
   var setVanta = () => {
-    if (window.VANTA) {
-      window.VANTA.DOTS({
+    if (window.THREE && window.VANTA) {
+      vantaEffect.current = window.VANTA.DOTS({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -24,7 +26,7 @@ const HeroSection = ({ position }) => {
       });
     }
   };
-  async function loadVanta() {    
+  async function loadVanta() {
     const VANTA = await import(
       "../../node_modules/vanta/dist/vanta.dots.min.js"
     );
@@ -32,11 +34,14 @@ const HeroSection = ({ position }) => {
     setVanta();
   }
   useEffect(() => {
-    loadVanta()
+    loadVanta();
+    return () => {
+      if (vantaEffect.current) vantaEffect.current.destroy();
+    };
   }, []);
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>    
+      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
       <div
         ref={vantaRef}
         className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"

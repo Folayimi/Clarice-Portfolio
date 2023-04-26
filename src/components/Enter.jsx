@@ -16,9 +16,10 @@ import Script from "next/script";
 
 const Enter = () => {
   const vantaRef = useRef(null);
+  let vantaEffect = useRef(null);
   var setVanta = () => {
     if (window.VANTA) {
-      window.VANTA.HALO({
+      vantaEffect.current = window.VANTA.HALO({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -42,6 +43,9 @@ const Enter = () => {
   }
   useEffect(() => {
     loadVanta();
+    return () => {
+      if (vantaEffect.current) vantaEffect.current.destroy();
+    };
   }, []);
 
   const Events = [
