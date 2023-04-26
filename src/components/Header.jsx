@@ -163,7 +163,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="flexsm gap-5">
+        <div className="flexsm flex-wrap gap-5">
           <p
             className="font-bold text-3xl sm1:text-2xl cursor-pointer"
             onClick={() => {

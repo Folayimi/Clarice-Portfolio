@@ -42,7 +42,7 @@ const HeroSection = ({ position }) => {
     <>
       <div
         ref={vantaRef}
-        className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"
+        className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[100vh] h-[44em] font-sans"
       >
         <div
           ref={position}
@@ -82,7 +82,10 @@ const HeroSection = ({ position }) => {
         <div className="flexmm cursor-pointer">
           <FaChevronDown color="white" size="60px" />
         </div>
-        <div className="absolute bottom-0 left-16 w-[45em] md:left-auto sm:w-full md:right-0 md:bottom-0 md:w-[60%] md1:w-[80%]">
+        <div className="block absolute bottom-0 left-16 w-[43em] md:left-auto md:right-0 md:bottom-0 md:w-[60%] md1:left-auto md1:right-auto md1:w-[40em] sm1:hidden">
+          <Image src={person} alt="person" width="100%" height="100%" />
+        </div>
+        <div className="hidden  absolute bottom-0 left-auto right-auto sm:w-[25em] w-[35em] sm1:block">
           <Image src={person} alt="person" width="100%" height="100%" />
         </div>
       </div>
