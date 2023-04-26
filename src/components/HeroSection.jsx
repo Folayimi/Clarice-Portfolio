@@ -26,16 +26,11 @@ const HeroSection = ({ position }) => {
       });
     }
   };
-  async function loadVanta() {
-    // Import three.js asynchronously
-    const THREE = await import("three");
-
-    // Import vanta-dots asynchronously
+  async function loadVanta() {    
     const VANTA = await import(
       "../../node_modules/vanta/dist/vanta.dots.min.js"
     );
 
-    // Initialize vanta-dots with the THREE object
     setVanta();
   }
   useEffect(() => {
@@ -43,8 +38,7 @@ const HeroSection = ({ position }) => {
   }, []);
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
-      <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></Script>
+      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>    
       <div
         ref={vantaRef}
         className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"

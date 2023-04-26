@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import Mission from "./Mission";
-import * as THREE from 'three';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
