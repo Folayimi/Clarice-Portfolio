@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import enter1 from "../Assets/enter1.png";
 import b1 from "../Assets/b1.png";
@@ -11,8 +12,38 @@ import f3 from "../Assets/f3.png";
 import f4 from "../Assets/f4.png";
 import f5 from "../Assets/f5.png";
 import f6 from "../Assets/f6.png";
+import Script from "next/script";
 
 const Enter = () => {
+  const vantaRef = useRef(null);
+  var setVanta = () => {
+    if (window.VANTA) {
+      window.VANTA.HALO({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        baseColor: 0x0,
+        backgroundColor: 0x0,
+        xOffset: 0,
+        yOffset: 0,
+        size: 0.8,
+      });
+    }
+  };
+  async function loadVanta() {
+    const VANTA = await import(
+      "../../node_modules/vanta/dist/vanta.halo.min.js"
+    );
+
+    setVanta();
+  }
+  useEffect(() => {
+    loadVanta();
+  }, []);
+
   const Events = [
     {
       img: b1,
@@ -81,13 +112,17 @@ const Enter = () => {
   ];
   return (
     <>
-      <div className="w-full cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20">
+      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
+      <div
+        ref={vantaRef}
+        className="w-full cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
+      >
         <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
               <div className="flexmm w-[10em] md:w-[8em]">
                 <Image src={enter1} alt="enter" width="100%" height="100%" />
-              </div>              
+              </div>
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 border-2 hover:border-primary1 hover:bg-black transition-colors duration-300">
                 Visit
               </div>

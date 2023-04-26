@@ -4,8 +4,6 @@ import person from "../Assets/person.png";
 import hex from "../Assets/hex.png";
 import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
-// import * as THREE from "three";
-// import { VantaDots } from "../../node_modules/vanta/dist/vanta.dots.min.js";
 import Script from "next/script";
 
 const HeroSection = ({ position }) => {
