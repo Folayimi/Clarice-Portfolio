@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <>
+    <>      
       <LandingPage page={router.query.page} />
     </>
   );

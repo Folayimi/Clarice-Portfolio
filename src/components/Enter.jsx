@@ -12,7 +12,6 @@ import f3 from "../Assets/f3.png";
 import f4 from "../Assets/f4.png";
 import f5 from "../Assets/f5.png";
 import f6 from "../Assets/f6.png";
-import Script from "next/script";
 
 const Enter = () => {
   const vantaRef = useRef(null);
@@ -115,8 +114,7 @@ const Enter = () => {
     },
   ];
   return (
-    <>
-      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
+    <>      
       <div
         ref={vantaRef}
         className="w-full cflexms pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"

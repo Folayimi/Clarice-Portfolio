@@ -4,7 +4,7 @@ import person from "../Assets/person.png";
 import hex from "../Assets/hex.png";
 import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
-import Script from "next/script";
+// import Script from "next/script";
 
 const HeroSection = ({ position }) => {
   const vantaRef = useRef(null);
@@ -26,13 +26,12 @@ const HeroSection = ({ position }) => {
       });
     }
   };
-  async function loadVanta() {
+  const loadVanta = async () => {
     const VANTA = await import(
       "../../node_modules/vanta/dist/vanta.dots.min.js"
     );
-
     setVanta();
-  }
+  };
   useEffect(() => {
     loadVanta();
     return () => {
@@ -41,7 +40,6 @@ const HeroSection = ({ position }) => {
   }, []);
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
       <div
         ref={vantaRef}
         className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"

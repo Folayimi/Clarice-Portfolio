@@ -5,7 +5,7 @@ import Mission from "./Mission";
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
-const LandingPage = ({ page }) => {
+const LandingPage = ({ page }) => {  
   const aboutRef = useRef(null);
   const missionRef = useRef(null);
   const homeRef = useRef(null);
