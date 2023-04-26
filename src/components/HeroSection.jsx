@@ -1,14 +1,66 @@
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import person from "../Assets/person.png";
-import hex from "../Assets/hex.png"
-import { FaChevronDown } from 'react-icons/fa';
+import hex from "../Assets/hex.png";
+import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
+import * as THREE from 'three';
+import { VantaDots } from "../../node_modules/vanta/dist/vanta.dots.min.js";
+import Head from "next/head";
+import Script from "next/script";
 
-const HeroSection = ({position}) => {
+const HeroSection = ({ position }) => {
+  const vantaRef = useRef(null);
+  // const vanta = {
+  //   el: "#your-element-selector",
+  //   mouseControls: true,
+  //   touchControls: true,
+  //   gyroControls: false,
+  //   minHeight: 200.0,
+  //   minWidth: 200.0,
+  //   scale: 1.0,
+  //   scaleMobile: 1.0,
+  //   color: 0xffffff,
+  //   color2: 0x2088ff,
+  // };
+
+  var setVanta = () => {
+    window.VANTA.DOTS({
+      el: vantaRef.current,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0xffffff,
+      color2: 0x2088ff,
+    });
+  };
+  useEffect(() => {
+    setVanta();
+
+    // window.edit_page.Event.subscribe("Page.beforeNewOneFadeIn", setVanta);
+
+    // return () => {
+    //   if (vantaRef.current) {
+    //     vantaRef.current.vanta.destroy();
+    //   }
+    // };
+  }, []);
   return (
     <>
-      <div ref={position} className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans">
-        <div className="text-primary1 text-6xl md:text-5xl md1:text-3xl cflexss w-full gap-10 md1:gap-4 font-semibold">
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" />
+      <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js" />
+      <div
+        ref={vantaRef}
+        className="relative w-full pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"
+      >
+        <div
+          ref={position}
+          className="text-primary1 text-6xl md:text-5xl md1:text-3xl cflexss w-full gap-10 md1:gap-4 font-semibold"
+        >
           <div className="flexsm w-full md:w-[50%] md1:w-full">
             <p>Hey There,</p>
           </div>
@@ -24,7 +76,7 @@ const HeroSection = ({position}) => {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("I am an entrepreneur,")                                                    
+                    .typeString("I am an entrepreneur,")
                     .pauseFor(1000)
                     .typeString(" visionary, innovator")
                     .pauseFor(1000)
@@ -33,7 +85,7 @@ const HeroSection = ({position}) => {
                     // .deleteAll()
                     .start();
                 }}
-              />              
+              />
             </div>
           </div>
         </div>
