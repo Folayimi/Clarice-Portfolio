@@ -4,37 +4,50 @@ import person from "../Assets/person.png";
 import hex from "../Assets/hex.png";
 import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
-import * as THREE from 'three';
-import { VantaDots } from "../../node_modules/vanta/dist/vanta.dots.min.js";
+// import * as THREE from "three";
+// import { VantaDots } from "../../node_modules/vanta/dist/vanta.dots.min.js";
 import Script from "next/script";
 
 const HeroSection = ({ position }) => {
   const vantaRef = useRef(null);
   var setVanta = () => {
-    window.VANTA.DOTS({
-      el: vantaRef.current,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0xffffff,
-      color2: 0x2088ff,
-    });
+    if (window.VANTA) {
+      window.VANTA.DOTS({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xffffff,
+        color2: 0x2088ff,
+      });
+    }
   };
-  useEffect(() => {
-    setVanta();
+  async function loadVanta() {
+    // Import three.js asynchronously
+    const THREE = await import("three");
 
+    // Import vanta-dots asynchronously
+    const VANTA = await import(
+      "../../node_modules/vanta/dist/vanta.dots.min.js"
+    );
+
+    // Initialize vanta-dots with the THREE object
+    setVanta();
+  }
+  useEffect(() => {
+    loadVanta()
   }, []);
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" />
-      <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js" />
+      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
+      <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></Script>
       <div
         ref={vantaRef}
-        className="relative w-full pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"
+        className="relative w-full bg-black pt-28 md1:pt-24 pr-10 pl-20 sm:pl-10 cflexbm sm:h-[35em] h-[44em] font-sans"
       >
         <div
           ref={position}
