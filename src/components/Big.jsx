@@ -1,6 +1,6 @@
 import Image from "next/image";
-import big from "../Assets/big.png";
 import baloons from "../Assets/baloons.png";
+import bigi from "../Assets/bigi.svg";
 
 const Project2 = () => {
   return (
@@ -9,8 +9,8 @@ const Project2 = () => {
         <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
-              <div className="flexmm w-[20em] md:w-[15em]">
-                <Image src={big} alt="big" width="100%" height="100%" />
+              <div className="flexmm w-[20em] md:w-[15em]">                               
+                <Image src={bigi} alt="big music label" />                
               </div>
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500">
                 Visit
