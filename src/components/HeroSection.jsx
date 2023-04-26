@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import person from "../Assets/person.png";
 import hex from "../Assets/hex.png";
-import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 // import Script from "next/script";
 
@@ -78,10 +77,7 @@ const HeroSection = ({ position }) => {
         </div>
         <div className="absolute bottom-[12em] right-16 w-[5em]">
           <Image src={hex} alt="Hex" width="100%" height="100%" />
-        </div>
-        <div className="flexmm cursor-pointer">
-          <FaChevronDown color="white" size="60px" />
-        </div>
+        </div>        
         <div className="block absolute bottom-0 left-16 w-[43em] md:left-auto md:right-0 md:bottom-0 md:w-[60%] md1:left-auto md1:right-auto md1:w-[40em] sm1:hidden">
           <Image src={person} alt="person" width="100%" height="100%" />
         </div>

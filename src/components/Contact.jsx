@@ -174,7 +174,7 @@ const Contact = () => {
               <>
                 <div className="cflexss gap-2 w-full">
                   <input
-                    className="w-full pl-5 border-b-2 bg-transparent border-primary1 focus:outline-none"
+                    className="w-full border-b-2 bg-transparent border-primary1 focus:outline-none"
                     name={field.name}
                     type={field.type}
                     value={userDetails[field.name]}
