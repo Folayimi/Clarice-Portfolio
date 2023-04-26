@@ -6,24 +6,10 @@ import { FaChevronDown } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 import * as THREE from 'three';
 import { VantaDots } from "../../node_modules/vanta/dist/vanta.dots.min.js";
-import Head from "next/head";
 import Script from "next/script";
 
 const HeroSection = ({ position }) => {
   const vantaRef = useRef(null);
-  // const vanta = {
-  //   el: "#your-element-selector",
-  //   mouseControls: true,
-  //   touchControls: true,
-  //   gyroControls: false,
-  //   minHeight: 200.0,
-  //   minWidth: 200.0,
-  //   scale: 1.0,
-  //   scaleMobile: 1.0,
-  //   color: 0xffffff,
-  //   color2: 0x2088ff,
-  // };
-
   var setVanta = () => {
     window.VANTA.DOTS({
       el: vantaRef.current,
@@ -41,17 +27,10 @@ const HeroSection = ({ position }) => {
   useEffect(() => {
     setVanta();
 
-    // window.edit_page.Event.subscribe("Page.beforeNewOneFadeIn", setVanta);
-
-    // return () => {
-    //   if (vantaRef.current) {
-    //     vantaRef.current.vanta.destroy();
-    //   }
-    // };
   }, []);
   return (
     <>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" />
+      <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js" />
       <div
         ref={vantaRef}
