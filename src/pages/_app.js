@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></Script>
       <Header />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

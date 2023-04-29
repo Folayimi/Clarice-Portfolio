@@ -12,7 +12,7 @@ const HeroSection = ({ position }) => {
   var setVanta = () => {
     if (window.THREE && window.VANTA) {
       vantaEffect.current = window.VANTA.DOTS({
-        el: vantaRef.current,
+        el: vantaRef.current,        
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -21,7 +21,9 @@ const HeroSection = ({ position }) => {
         scale: 1.0,
         scaleMobile: 1.0,
         color: 0xffffff,
-        color2: 0x2088ff,
+        backgroundColor: 0x0,
+        size: 4.4,
+        showLines: false,
       });
     }
   };

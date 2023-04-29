@@ -41,12 +41,18 @@ const Contact = () => {
     } else {
       setValid(false);
     }
-    if (!EMAIL_REGEX.test(userDetails["email"].trim()) && userDetails["email"].trim().length > 0) {
+    if (
+      !EMAIL_REGEX.test(userDetails["email"].trim()) &&
+      userDetails["email"].trim().length > 0
+    ) {
       setEmailError(true);
     } else {
       setEmailError(false);
     }
-    if (!PHONE_REGEX.test(userDetails["contactPhone"].trim()) && userDetails["contactPhone"].trim().length > 0) {
+    if (
+      !PHONE_REGEX.test(userDetails["contactPhone"].trim()) &&
+      userDetails["contactPhone"].trim().length > 0
+    ) {
       setPhoneError(true);
     } else {
       setPhoneError(false);
@@ -156,7 +162,7 @@ const Contact = () => {
     <>
       <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  gap-10 md:gap-0 pt-32 px-10 bg-[#002FA8] text-primary1">
         <div className="cflexss gap-5 w-1/3 md:w-full">
-          <p className="text-5xl md:text-4xl font-normal">Get in touch,</p>
+          <p className="text-5xl md:text-4xl font-semibold">Get in touch,</p>
           <p className="text-xl md:text-sm font-light">
             thank you for taking the time to go through my website. I am always
             excited to connect with like-minded individuals and expand my
@@ -243,11 +249,7 @@ const Contact = () => {
               }}
             />
             <div
-              className={
-                EMAIL_REGEX.test(email)
-                  ? "flexmm w-[3em] h-[2em] bg-[#2931FB] p-2 cursor-pointer"
-                  : "flexmm w-[3em] h-[2em] bg-[gray] opacity-50 p-2 cursor-pointer"
-              }
+              className="flexmm w-[3em] h-[2em] bg-[#2931FB] p-2 cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 setEmail("");

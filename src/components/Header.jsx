@@ -21,7 +21,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      <div className="fixed top-0 left-0 text-primary1 flexbs z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
+      <div className="fixed top-0 left-0 text-primary1 flexbm z-50 w-full py-4 pr-20 sm1:pr-4 pl-4 bg-black font-sans">
         <div
           style={{ right: `${margin}%` }}
           className="sm1:block fixed top-0 pb-5 rounded-xl overflow-y-auto bg-white z-100 text-black border-2 border-black transition-all duration-1000 ease-in-out hidden"

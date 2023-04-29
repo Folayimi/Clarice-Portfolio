@@ -2,8 +2,10 @@ import Image from "next/image";
 import steps2 from "../Assets/steps2.png";
 import bubble from "../Assets/bubble.png";
 import bubble2 from "../Assets/bubble2.png";
+import { useRouter } from "next/router";
 
 const RiskGames = () => {
+  const router = useRouter();
   return (
     <>
       <div className="cflexmm pt-32 bg-gradient-to-b w-full h-full from-secondary5-200 to-secondary5-100 text-primary1 md:pt-20">
@@ -13,7 +15,11 @@ const RiskGames = () => {
               <div className="flexmm w-[20em] md:w-[15em]">
                 <Image src={steps2} alt="gogi" width="100%" height="100%" />
               </div>
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-300">
+              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-300"
+                onClick={()=>{                  
+                  window.location.replace("https://riskgames.vercel.app");
+                }}
+              >
                 Visit
               </div>
             </div>

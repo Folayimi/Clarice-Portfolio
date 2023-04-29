@@ -67,7 +67,7 @@ const Mission = ({ position }) => {
         <div className="px-10 pt-20 md:px-5 cflexmm gap-5">
           <p className="font-bold text-4xl">My Projects</p>
           <div className="flexmm gap-7 flex-wrap pb-5">
-            <motion.div
+            {/* <motion.div
               className="card bg-primary1"
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 200, damping: 8 }}
@@ -78,7 +78,7 @@ const Mission = ({ position }) => {
               <div>
                 <Image src={citron} alt="citron" />
               </div>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               className="card bg-primary7"
               whileHover={{ y: -10 }}
@@ -104,7 +104,7 @@ const Mission = ({ position }) => {
               </div>
               <p className="text-4xl font-bold">ENTR</p>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="card bg-primary8"
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 200, damping: 8 }}
@@ -116,7 +116,7 @@ const Mission = ({ position }) => {
                 <Image src={gogi} alt="gogi" width="100%" height="100%" />
               </div>
               <p className="text-4xl font-bold">Gogi</p>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               className="card bg-primary9 p-2"
               whileHover={{ y: -10 }}

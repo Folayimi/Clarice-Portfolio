@@ -1,17 +1,51 @@
 import Image from "next/image";
 import gogi from "../Assets/gogi.png";
 import companies from "../Assets/companies.png";
+import { useRef, useEffect } from "react";
 
 const Gogi = () => {
+  const vantaRef = useRef(null);
+  let vantaEffect = useRef(null);
+
+  var setVanta = () => {
+    if (window.THREE && window.VANTA) {
+      vantaEffect.current = window.VANTA.NET({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3f8eff,
+        backgroundColor: 0xd1872,
+      });
+    }
+  };
+
+  const loadVanta = async () => {
+    const VANTA = await import(
+      "../../node_modules/vanta/dist/vanta.net.min.js"
+    );
+    setVanta();
+  };
+  useEffect(() => {
+    loadVanta();
+    return () => {
+      if (vantaEffect.current) vantaEffect.current.destroy();
+    };
+  }, []);
+
   return (
     <>
-      <div className="cflexms pt-32 bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20">
+      <div ref={vantaRef} className="cflexms h-full pt-32 h-full bg-gradient-to-b from-secondary3-100 to-secondary3-200 text-primary1 md:pt-20">
         <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
               <div className="flexmm w-[16em] md:w-[12em]">
                 <Image src={gogi} alt="gogi" width="100%" height="100%" />
-              </div>              
+              </div>
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-300">
                 Visit
               </div>
