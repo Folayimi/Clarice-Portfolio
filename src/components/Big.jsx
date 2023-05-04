@@ -17,7 +17,7 @@ const Project2 = () => {
               </div>
             </div>
             <div className="cflexss gap-4 w-2/3 md:w-full">
-              <p className="font-bold text-6xl capitalize md:text-5xl">
+              <p className="font-bold text-6xl capitalize md:text-4xl">
                 Big Music Label
               </p>
               <p className="text-xl font-semibold">
@@ -30,7 +30,7 @@ const Project2 = () => {
                 built a record company that offers artists a safe atmosphere
                 where they may feel comfortable.
               </p>
-              <div className="w-[25em] md:w-[20em]">
+              <div className="w-[25em] md:w-[20em] ml-[-2.5em]">
                 <Image src={baloons} alt="baloons" width="100%" height="100%" />
               </div>
             </div>

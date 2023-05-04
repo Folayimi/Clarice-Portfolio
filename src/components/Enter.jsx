@@ -39,7 +39,7 @@ const Enter = () => {
     );
 
     setVanta();
-  }
+  };
   // useEffect(() => {
   //   loadVanta();
   //   return () => {
@@ -114,7 +114,7 @@ const Enter = () => {
     },
   ];
   return (
-    <>      
+    <>
       <div
         ref={vantaRef}
         className="w-full cflexmm pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
@@ -166,10 +166,14 @@ const Enter = () => {
                           <p className="text-sm text-[#A4A4AA]">
                             {event.content}
                           </p>
-                          <Image src={event.star} />
+                          <div className="flexmm w-[10em]">
+                            <Image src={event.star} />
+                          </div>                          
                         </div>
                         <div className="flexsm gap-2">
-                          <Image src={event.loc} />
+                          <div className="flexmm w-[1.5em]">
+                            <Image src={event.loc} width="100%" height="100%" />
+                          </div>
                           <p className="text-xl text-[#A4A4AA]">{event.type}</p>
                         </div>
                       </div>

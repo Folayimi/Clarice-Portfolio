@@ -99,7 +99,7 @@ const Header = () => {
                     : "block rounded-sm cflexss gap-[1em] bg-white pt-5 px-2"
                 }
               >
-                <li
+                {/* <li
                   className="w-full pl-2"
                   onClick={() => {
                     router.push("/giftroom");
@@ -108,7 +108,7 @@ const Header = () => {
                   }}
                 >
                   Giftroom
-                </li>
+                </li> */}
                 <li
                   className="w-full pl-2"
                   onClick={() => {
@@ -129,7 +129,7 @@ const Header = () => {
                 >
                   ENTR
                 </li>
-                <li
+                {/* <li
                   className="w-full pl-2"
                   onClick={() => {
                     router.push("/gogi");
@@ -138,7 +138,7 @@ const Header = () => {
                   }}
                 >
                   Gogi
-                </li>
+                </li> */}
                 <li
                   className="w-full pl-2"
                   onClick={() => {
@@ -230,10 +230,10 @@ const Header = () => {
                 className={
                   show === "hidden"
                     ? "hidden"
-                    : "block absolute top-[3em] w-[12em] h-[18em] rounded-[0.5em] border-2 border-black flex flex-col justify-between items-center gap-[1em] bg-white p-2"
+                    : "block absolute top-[3em] w-[12em] rounded-[0.5em] border-2 border-black flex flex-col justify-between items-center gap-[1em] bg-white p-2"
                 }
               >
-                <li
+                {/* <li
                   className="menu"
                   onClick={() => {
                     router.push("/giftroom");
@@ -241,7 +241,7 @@ const Header = () => {
                   }}
                 >
                   Giftroom
-                </li>
+                </li> */}
                 <li
                   className="menu"
                   onClick={() => {
@@ -260,7 +260,7 @@ const Header = () => {
                 >
                   ENTR
                 </li>
-                <li
+                {/* <li
                   className="menu"
                   onClick={() => {
                     router.push("/gogi");
@@ -268,7 +268,7 @@ const Header = () => {
                   }}
                 >
                   Gogi
-                </li>
+                </li> */}
                 <li
                   className="menu"
                   onClick={() => {
