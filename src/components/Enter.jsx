@@ -129,7 +129,7 @@ const Enter = () => {
           <div className="flexmm w-full gap-5 md:flex-col pr-[12%] md:pr-0 md:gap-10">
             <div className="cflexsm gap-5 w-1/3 md:w-full">
               <div className="flexmm w-[10em] md:w-[8em]">
-                <Image src={enter1} alt="enter" width="100%" height="100%" />
+                <Image src={enter1} alt="entr" width="100%" height="100%" />
               </div>
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 border-2 hover:border-primary1 hover:bg-black transition-colors duration-300">
                 Visit
@@ -164,7 +164,7 @@ const Enter = () => {
                   <>
                     <div className="tickets w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
                       <div className="w-[15em] md:w-full">
-                        <Image src={event.img} />
+                        <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
                         <p className="text-2xl">{event.title}</p>
@@ -173,12 +173,17 @@ const Enter = () => {
                             {event.content}
                           </p>
                           <div className="flexmm w-[10em]">
-                            <Image src={event.star} />
+                            <Image src={event.star} alt="smt" />
                           </div>
                         </div>
                         <div className="flexsm gap-2">
                           <div className="flexmm w-[1.5em]">
-                            <Image src={event.loc} width="100%" height="100%" />
+                            <Image
+                              src={event.loc}
+                              width="100%"
+                              height="100%"
+                              alt="smt"
+                            />
                           </div>
                           <p className="text-xl text-[#A4A4AA]">{event.type}</p>
                         </div>
@@ -199,8 +204,8 @@ const Enter = () => {
                 return (
                   <>
                     <div className="tickets p-3 w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div style={{width:`${ticket.width}`}}>
-                        <Image src={ticket.img} />
+                      <div style={{ width: `${ticket.width}` }}>
+                        <Image src={ticket.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
                         <p className="text-2xl">{ticket.title}</p>
