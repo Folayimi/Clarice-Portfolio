@@ -81,36 +81,42 @@ const Enter = () => {
       title: "NoN-Disclosure",
       content:
         "Protect sensitive information by requiring guests to sign E-NDAs before entering event.",
+      width: "10em",
     },
     {
       img: f2,
       title: "ID Verification",
       content:
         "Verify the identity of your guests to ensure a secure and controlled event experience",
+      width: "10em",
     },
     {
       img: f3,
       title: "Doc-sign",
       content:
         "Streamline the signing process by allowing guests to digitally sign important documents related to your event.",
+      width: "13em",
     },
     {
       img: f4,
       title: "Raffles",
       content:
         "Create and manage raffles for your event, complete with winning number generation.",
+      width: "10em",
     },
     {
       img: f5,
       title: "Doc-Upload",
       content:
         "Allow your guests to upload documents and easily keep record of the uploads",
+      width: "10em",
     },
     {
       img: f6,
       title: "Fundraising",
       content:
         "Raise money for your cause with our built-in fundraiser tools, including donation tracking and goal setting.",
+      width: "13em",
     },
   ];
   return (
@@ -168,7 +174,7 @@ const Enter = () => {
                           </p>
                           <div className="flexmm w-[10em]">
                             <Image src={event.star} />
-                          </div>                          
+                          </div>
                         </div>
                         <div className="flexsm gap-2">
                           <div className="flexmm w-[1.5em]">
@@ -193,7 +199,7 @@ const Enter = () => {
                 return (
                   <>
                     <div className="tickets p-3 w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div className="w-[10em] md:w-full">
+                      <div style={{width:`${ticket.width}`}}>
                         <Image src={ticket.img} />
                       </div>
                       <div className="cflexss gap-1">
