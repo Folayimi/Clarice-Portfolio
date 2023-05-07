@@ -167,7 +167,7 @@ const Enter = () => {
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
-                        <p className="text-2xl">{event.title}</p>
+                        <p className="text-2xl md:text-xl">{event.title}</p>
                         <div>
                           <p className="text-sm text-[#A4A4AA]">
                             {event.content}
