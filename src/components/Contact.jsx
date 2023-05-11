@@ -160,7 +160,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flexbs md:flex-col md:justify-start md:items-start md:px-5  gap-10 md:gap-0 pt-32 px-10 bg-[#002FA8] text-primary1">
+      <div className="flexbs md:flex-col md:justify-start md:items-start h-[100%] lg:h-[100vh] md:px-5  gap-10 md:gap-0 pt-32 px-10 bg-[#002FA8] text-primary1">
         <div className="cflexss gap-5 w-1/3 md:w-full">
           <p className="text-5xl md:text-4xl font-semibold">Get in touch,</p>
           <p className="text-xl md:text-sm font-light">
