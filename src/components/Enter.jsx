@@ -56,6 +56,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Cleaning",
+      width: "12em",
     },
     {
       img: b2,
@@ -64,6 +65,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Venues",
+      width: "11em",
     },
     {
       img: b3,
@@ -73,6 +75,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Rentals",
+      width: "15em",
     },
   ];
   const Tickets = [
@@ -162,8 +165,8 @@ const Enter = () => {
               {Events.map((event) => {
                 return (
                   <>
-                    <div className="tickets w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
-                      <div className="w-[15em] md:w-full">
+                    <div className="tickets w-[25em] h-[13em] md:w-[20em] md:h-auto flex-grow-0 flex-shrink">
+                      <div style={{width:`${event.width}`}}>
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
@@ -177,7 +180,7 @@ const Enter = () => {
                           </div>
                         </div>
                         <div className="flexsm gap-2">
-                          <div className="flexmm w-[1.5em]">
+                          <div className="flexmm w-[1.3em]">
                             <Image
                               src={event.loc}
                               width="100%"
@@ -203,7 +206,7 @@ const Enter = () => {
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets p-3 w-[25em] md:w-[20em] flex-grow-0 flex-shrink">
+                    <div className="tickets p-3 w-[25em] md:w-[20em] h-[9em] flex-grow-0 flex-shrink">
                       <div style={{ width: `${ticket.width}` }}>
                         <Image src={ticket.img} alt="smt" />
                       </div>
