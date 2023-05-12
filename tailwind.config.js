@@ -46,7 +46,7 @@ module.exports = {
         'sm1': { 'max': "700px" },
         'md': { 'max': "1100px" },
         'md1': { 'max': "850px"},
-        'lg': { 'max': "1023px" },
+        'lg': { 'max': "1030px" },
         'xl': { 'max': "1280px" },
         "2xl": { 'max': "1536px" },
       },

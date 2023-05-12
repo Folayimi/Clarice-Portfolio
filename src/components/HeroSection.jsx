@@ -83,7 +83,7 @@ const HeroSection = ({ position }) => {
         <div className="block absolute bottom-0 left-16 w-[43em] md:left-auto md:right-0 md:bottom-0 md:w-[60%] md1:left-auto md1:right-auto md1:w-[40em] sm1:hidden">
           <Image src={person} alt="person" width="100%" height="100%" />
         </div>
-        <div className="hidden  absolute bottom-0 left-auto right-auto sm:w-[25em] w-[35em] sm1:block">
+        <div className="hidden  absolute bottom-0 left-auto right-auto sm:w-[100%] w-[35em] sm1:block">
           <Image src={person} alt="person" width="100%" height="100%" />
         </div>
       </div>
