@@ -30,8 +30,8 @@ const Project2 = () => {
                 built a record company that offers artists a safe atmosphere
                 where they may feel comfortable.
               </p>
-              <div className="w-[25em] md:w-[20em] ml-[-2.5em]">
-                <Image src={baloons} alt="baloons" width="100%" height="100%" />
+              <div className="w-[25em] md:w-[20em] md:ml-[-2em] ml-[-2.5em]">
+                <Image src={baloons} alt="baloons"width="100%" height="100%" />
               </div>
             </div>
           </div>
