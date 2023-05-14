@@ -56,7 +56,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Cleaning",
-      width: "10em",
+      width: "8em",
     },
     {
       img: b2,
@@ -65,7 +65,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Venues",
-      width: "9em",
+      width: "7em",
     },
     {
       img: b3,
@@ -75,7 +75,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Rentals",
-      width: "13em",
+      width: "11em",
     },
   ];
   const Tickets = [
@@ -126,7 +126,7 @@ const Enter = () => {
     <>
       <div
         ref={vantaRef}
-        className="w-full cflexmm pt-32 bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
+        className="w-full cflexmm pt-32 lg:h-[100vh] bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
       >
         <div className="cflexsm md: p-7">
           <div className="flexmm w-full gap-5 md:flex-col pr-[12%] md:pr-0 md:gap-10">
@@ -160,18 +160,18 @@ const Enter = () => {
             <p className="font-bold text-2xl sm1:text-2xl">
               Book and manage event services,
             </p>
-            <div className="flexmm w-full gap-7 flex-wrap pb-5 text-left">
+            <div className="flexmm w-full gap-7 flex-wrap pb-5 text-left px-18">
               {Events.map((event) => {
                 return (
                   <>
-                    <div className="tickets w-[30em] md:w-[20em] flex-grow-0 flex-shrink">
+                    <div className="tickets w-[28em] sm:w-[20em] flex-grow-0 flex-shrink">
                       <div style={{ width: `${event.width}` }}>
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
-                        <p className="text-2xl md:text-xl">{event.title}</p>
+                        <p className="text-[28px] md:text-xl">{event.title}</p>
                         <div>
-                          <p className="text-sm text-[#A4A4AA]">
+                          <p className="text-[12px] text-[#A4A4AA]">
                             {event.content}
                           </p>
                           <div className="flexmm w-[10em]">
@@ -187,7 +187,7 @@ const Enter = () => {
                               alt="smt"
                             />
                           </div>
-                          <p className="text-xl text-[#A4A4AA]">{event.type}</p>
+                          <p className="text-[16px] text-[#A4A4AA]">{event.type}</p>
                         </div>
                       </div>
                     </div>
@@ -201,11 +201,11 @@ const Enter = () => {
             <p className="font-bold text-2xl sm1:text-xl">
               Elevate your event planning with our comprehensive add-on features
             </p>
-            <div className="flexmm gap-7 flex-wrap pb-5 text-left">
+            <div className="flexmm gap-7 flex-wrap pb-5 text-left px-18">
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets p-3 w-[30em] md:w-[20em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
+                    <div className="tickets p-3 w-[28em] sm:w-[20em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
                       <div style={{ width: `${ticket.width}` }}>
                         <Image src={ticket.img} alt="smt" />
                       </div>

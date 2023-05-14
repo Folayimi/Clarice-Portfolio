@@ -12,7 +12,7 @@ const RiskGames = () => {
         <div className="cflexsm px-5 md:px-0">
           <div className="flexmm w-full gap-5 md:p-7 md:flex-col md:pr-[7%] md:gap-10">
             <div className="cflexsm w-1/3 gap-10 md:w-full">
-              <div className="flexmm w-[20em] md:w-[7em]">
+              <div className="flexmm w-[18em] md:w-[7em]">
                 <Image src={steps2} alt="gogi" width="100%" height="100%" />
               </div>
               <div
