@@ -169,9 +169,9 @@ const Enter = () => {
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
-                        <p className="text-[28px] md:text-xl">{event.title}</p>
+                        <p className="text-[25px] md:text-xl">{event.title}</p>
                         <div>
-                          <p className="text-[12px] text-[#A4A4AA]">
+                          <p className="text-[13px] text-[#A4A4AA]">
                             {event.content}
                           </p>
                           <div className="flexmm w-[10em]">
