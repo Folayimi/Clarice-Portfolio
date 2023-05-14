@@ -9,7 +9,7 @@ const Project2 = () => {
         <div className="cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
-              <div className="flexmm w-[20em] md:w-[15em]">                               
+              <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">                               
                 <Image src={bigi} alt="big music label" />                
               </div>
               <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500">
@@ -17,7 +17,7 @@ const Project2 = () => {
               </div>
             </div>
             <div className="cflexss gap-4 w-2/3 md:w-full">
-              <p className="font-bold text-6xl capitalize md:text-4xl">
+              <p className="header">
                 Big Music Label
               </p>
               <p className="text-xl font-semibold">

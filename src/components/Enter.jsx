@@ -56,7 +56,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Cleaning",
-      width: "12em",
+      width: "10em",
     },
     {
       img: b2,
@@ -65,7 +65,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Venues",
-      width: "11em",
+      width: "9em",
     },
     {
       img: b3,
@@ -75,7 +75,7 @@ const Enter = () => {
       star: star,
       loc: loc,
       type: "Rentals",
-      width: "15em",
+      width: "13em",
     },
   ];
   const Tickets = [
@@ -139,8 +139,8 @@ const Enter = () => {
               </div>
             </div>
             <div className="cflexss gap-4 w-2/3 md:w-full">
-              <p className="font-bold text-6xl">ENTR</p>
-              <p className="text-4xl md:text-3xl font-semibold capitalize">
+              <p className="header">ENTR</p>
+              <p className="text-4xl font-semibold md:text-xl font-semibold capitalize">
                 Streamline your party planning, elevate your event’s experience
               </p>
               <p className="text-sm">
@@ -151,9 +151,8 @@ const Enter = () => {
                 to execution. Our app allows hosts to create events on both
                 mobile and desktop platforms, making it easy to invite guests,
                 set event requirements and build the most custom event. Whether
-                you're planning a small gathering or a large event, Event Social
-                has everything you need to make your event a success. Give
-                yourself the power to host with confidence.
+                you're planning a small gathering or a large event, ENTR has
+                everything you need to make your event a success.
               </p>
             </div>
           </div>
@@ -165,8 +164,8 @@ const Enter = () => {
               {Events.map((event) => {
                 return (
                   <>
-                    <div className="tickets w-[25em] h-[13em] md:w-[20em] md:h-auto flex-grow-0 flex-shrink">
-                      <div style={{width:`${event.width}`}}>
+                    <div className="tickets w-[30em] md:w-[20em] flex-grow-0 flex-shrink">
+                      <div style={{ width: `${event.width}` }}>
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
@@ -199,19 +198,19 @@ const Enter = () => {
           </div>
 
           <div className="cflexmm gap-7 pb-32 w-full md:text-center">
-            <p className="font-bold text-2xl sm1:text-2xl">
+            <p className="font-bold text-2xl sm1:text-xl">
               Elevate your event planning with our comprehensive add-on features
             </p>
             <div className="flexmm gap-7 flex-wrap pb-5 text-left">
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets p-3 w-[25em] md:w-[20em] h-[9em] flex-grow-0 flex-shrink">
+                    <div className="tickets p-3 w-[30em] md:w-[20em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
                       <div style={{ width: `${ticket.width}` }}>
                         <Image src={ticket.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
-                        <p className="text-2xl">{ticket.title}</p>
+                        <p className="text-2xl md:text-xl">{ticket.title}</p>
                         <div>
                           <p className="text-sm text-[#A4A4AA]">
                             {ticket.content}
