@@ -42,6 +42,7 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
       },
       screens: {
+        'lt': { 'max' : '500px'},
         'sm': { 'max': '600px' },
         'sm1': { 'max': "700px" },
         'md': { 'max': "1100px" },

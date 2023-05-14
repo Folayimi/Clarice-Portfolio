@@ -164,14 +164,14 @@ const Enter = () => {
               {Events.map((event) => {
                 return (
                   <>
-                    <div className="tickets w-[28em] sm:w-[20em] flex-grow-0 flex-shrink">
+                    <div className="tickets w-[28em] sm:w-[19em] flex-grow-0 flex-shrink">
                       <div style={{ width: `${event.width}` }}>
                         <Image src={event.img} alt="smt" />
                       </div>
                       <div className="cflexss gap-1">
                         <p className="text-[25px] md:text-xl">{event.title}</p>
                         <div>
-                          <p className="text-[13px] text-[#A4A4AA]">
+                          <p className="text-[13px] text-[#A4A4AA] flex-wrap">
                             {event.content}
                           </p>
                           <div className="flexmm w-[10em]">
@@ -205,7 +205,7 @@ const Enter = () => {
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets p-3 w-[28em] sm:w-[20em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
+                    <div className="tickets p-3 w-[28em] sm:w-[19em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
                       <div style={{ width: `${ticket.width}` }}>
                         <Image src={ticket.img} alt="smt" />
                       </div>
