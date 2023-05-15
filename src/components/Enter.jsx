@@ -97,7 +97,7 @@ const Enter = () => {
     },
     {
       img: f3,
-      title: "Doc-sign",
+      title: "Doc-Sign",
       content:
         "Streamline the signing process by allowing guests to digitally sign important documents related to your event.",
       width: "13em",
