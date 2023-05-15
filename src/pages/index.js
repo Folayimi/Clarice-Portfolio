@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import LandingPage from "@/components/LandingPage";
 import { useRouter } from "next/router";
 

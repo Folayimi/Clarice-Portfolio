@@ -1,17 +1,18 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import enter1 from "../Assets/enter1.png";
-import b1 from "../Assets/b1.png";
+import b1 from "../Assets/b1.svg";
 import b2 from "../Assets/b2.png";
-import b3 from "../Assets/b3.png";
-import star from "../Assets/star.png";
-import loc from "../Assets/loc.png";
+import b3 from "../Assets/b3.svg";
+import star from "../Assets/star.svg";
+import loc from "../Assets/loc.svg";
 import f1 from "../Assets/f1.png";
 import f2 from "../Assets/f2.png";
 import f3 from "../Assets/f3.png";
 import f4 from "../Assets/f4.png";
 import f5 from "../Assets/f5.png";
 import f6 from "../Assets/f6.png";
+import Link from "next/link";
 
 const Enter = () => {
   const vantaRef = useRef(null);
@@ -37,9 +38,9 @@ const Enter = () => {
     const VANTA = await import(
       "../../node_modules/vanta/dist/vanta.halo.min.js"
     );
-
     setVanta();
   };
+
   // useEffect(() => {
   //   loadVanta();
   //   return () => {
@@ -50,7 +51,7 @@ const Enter = () => {
   const Events = [
     {
       img: b1,
-      title: "Party CleanUp Inc",
+      title: "Party Clean-Up Inc",
       content:
         "20 years+ of experience cleaning venues and homes. We are fit to service any...",
       star: star,
@@ -78,12 +79,13 @@ const Enter = () => {
       width: "11em",
     },
   ];
+
   const Tickets = [
     {
       img: f1,
-      title: "NoN-Disclosure",
+      title: "Non-Disclosure",
       content:
-        "Protect sensitive information by requiring guests to sign E-NDAs before entering event.",
+        "Protect sensitive information with option to require guests to sign nda before entering event.",
       width: "10em",
     },
     {
@@ -104,7 +106,7 @@ const Enter = () => {
       img: f4,
       title: "Raffles",
       content:
-        "Create and manage raffles for your event, complete with winning number generation.",
+        "Create, manage and monetize raffles for your event, complete with winning number generation.",
       width: "10em",
     },
     {
@@ -118,7 +120,7 @@ const Enter = () => {
       img: f6,
       title: "Fundraising",
       content:
-        "Raise money for your cause with our built-in fundraiser tools, including donation tracking and goal setting.",
+        "Raise money for your cause with our built-in fundraiser tools, including payment processing, donation tracking and goal setting.",
       width: "13em",
     },
   ];
@@ -126,72 +128,75 @@ const Enter = () => {
     <>
       <div
         ref={vantaRef}
-        className="w-full cflexmm pt-32 lg:h-[100vh] bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
+        className="h-screen overflow-auto w-full cflexmm pt-32 lg:h-[100vh] bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
       >
-        <div className="cflexsm md: p-7">
-          <div className="flexmm w-full gap-5 md:flex-col pr-[12%] md:pr-0 md:gap-10">
-            <div className="cflexsm gap-5 w-1/3 md:w-full">
-              <div className="flexmm w-[10em] md:w-[8em]">
-                <Image src={enter1} alt="entr" width="100%" height="100%" />
+        <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-5">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+            <div className="cflexsm gap-2 w-1/3 md:w-full mr-[35px]">
+              <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%] mt-[-37px] mr-[-45px]">
+                {/* <Image src={bigi} alt="big music label" />                 */}
+                <Image src={'/enter-logo.svg'} alt="Entr.event" width={416} height={428} />
               </div>
-              <div className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 border-2 hover:border-primary1 hover:bg-black transition-colors duration-300">
+              <Link href="https://entr.events" className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500">
                 Visit
-              </div>
+              </Link>
             </div>
-            <div className="cflexss gap-4 w-2/3 md:w-full">
-              <p className="header">ENTR</p>
-              <p className="text-4xl font-semibold md:text-xl font-semibold capitalize">
+
+            <div className="cflexss pt-2 gap-4 w-2/3 md:w-full">
+              <p className="header" style={{ textTransform: 'inherit' }}>
+                ENTR.events
+              </p>
+              <p className="text-xl font-semibold capitalize">
                 Streamline your party planning, elevate your event’s experience
               </p>
               <p className="text-sm">
-                Introducing ENTR, a revolutionary event creation platform that
-                makes setting-up parties, events and meetings for all occasions
-                easy and hassle-free. We give the power to the host,
-                streamlining the entire process of hosting events, from planning
-                to execution. Our app allows hosts to create events on both
-                mobile and desktop platforms, making it easy to invite guests,
-                set event requirements and build the most custom event. Whether
-                you're planning a small gathering or a large event, ENTR has
-                everything you need to make your event a success.
+                Introducing ENTR, a revolutionary event creation platform that makes setting-up parties, events and meetings for all occasions easy and hassle-free. We give the power to the host, streamlining the entire process of hosting events, from planning to execution. Our app allows hosts to create events on both mobile and desktop platforms, making it easy to invite guests, set event requirements, book services and build custom events. Whether you're planning a small gathering or a large event, ENTR has everything you need to make your event a success.
               </p>
+              {/* <div className="w-[25em] md:w-[20em] md:ml-[-2em] ml-[-2.5em]">
+                <Image src={baloons} alt="baloons" width="100%" height="100%" />
+              </div> */}
             </div>
           </div>
-          <div className="cflexmm gap-7 pt-28 pb-32 w-full md:text-center">
+
+          <div className="cflexmm gap-7 py-[55px] w-full md:text-center">
             <p className="font-bold text-2xl sm1:text-2xl">
-              Book and manage event services,
+              Book and manage event services
             </p>
-            <div className="flexmm w-full gap-7 flex-wrap pb-5 text-left px-18">
-              {Events.map((event) => {
+            <div className="flexmm w-screen gap-3 flex-wrap pb-5 text-left px-18">
+              {Events.map((event, index) => {
                 return (
-                  <>
-                    <div className="tickets w-[28em] sm:w-[19em] flex-grow-0 flex-shrink">
-                      <div style={{ width: `${event.width}` }}>
-                        <Image src={event.img} alt="smt" />
+                  <div key={`m_${index}`} className="py-[22px] px-[14px] bg-[#0D0E15] rounded-[16px]">
+                    <div className="flex items-center h-[133px] w-full">
+                      <div className="min-w-[123px] h-[133px]">
+                        <Image src={event.img} alt="smt" className="h-full w-full" />
                       </div>
-                      <div className="cflexss gap-1">
-                        <p className="text-[25px] md:text-xl">{event.title}</p>
-                        <div>
-                          <p className="text-[13px] text-[#A4A4AA] flex-wrap">
-                            {event.content}
-                          </p>
-                          <div className="flexmm w-[10em]">
-                            <Image src={event.star} alt="smt" />
+                      <div className="w-[320px] h-[133px] pl-4">
+                        <div className="cflexss gap-1">
+                          <p className="text-[22px] md:text-xl">{event.title}</p>
+                          <div>
+                            <p className="text-[13px] text-[#A4A4AA] flex-wrap">
+                              {event.content}
+                            </p>
+                            <div className="flex items-center mt-2">
+                              <Image src={event.star} alt="smt" className="w-[5em]" />
+                              <span className="text-[12px] text-[#A4A4A4]">(32)</span>
+                            </div>
                           </div>
-                        </div>
-                        <div className="flexsm gap-2">
-                          <div className="flexmm w-[1.3em]">
-                            <Image
-                              src={event.loc}
-                              width="100%"
-                              height="100%"
-                              alt="smt"
-                            />
+                          <div className="flexsm gap-2">
+                            <div className="flexmm w-[18px] h-[19px]">
+                              <Image
+                                src={event.loc}
+                                width="100%"
+                                height="100%"
+                                alt="smt"
+                              />
+                            </div>
+                            <p className="text-[14px] text-[#A4A4AA]">{event.type}</p>
                           </div>
-                          <p className="text-[16px] text-[#A4A4AA]">{event.type}</p>
                         </div>
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>

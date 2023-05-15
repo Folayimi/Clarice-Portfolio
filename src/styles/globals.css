@@ -17,7 +17,7 @@
     @apply px-2 py-2 w-full hover:bg-black rounded-[0.5em] text-black hover:text-white transition-colors duration-300
 }
 .flexbm{
-    @apply flex justify-between items-center
+    @apply flex justify-between items-start
 }
 .flexbs{
     @apply flex justify-between items-start

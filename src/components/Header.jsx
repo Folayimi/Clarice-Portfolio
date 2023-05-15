@@ -14,6 +14,7 @@ import instagram from "../Assets/instagram.png";
 import twitter from "../Assets/twitter.png";
 import linkedIn from "../Assets/linkedln.png";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const [margin, setMargin] = useState(-100);
@@ -173,18 +174,18 @@ const Header = () => {
             Clarice
           </p>
           <div className="flexmm gap-3">
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            <Link href={`https://www.facebook.com/profile.php?id=100087506825565`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={facebook} alt="facebook" />
-            </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            </Link>
+            <Link href={`https://twitter.com/claricebona`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={twitter} alt="twitter" />
-            </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            </Link>
+            <Link href={`https://www.instagram.com/clariceistheone/`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={instagram} alt="instagram" />
-            </div>
-            <div className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            </Link>
+            <Link href={`https://www.linkedin.com/in/clarice-bona-994163270/`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
               <Image src={linkedIn} alt="linkedln" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="sm1:hidden block">

@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google"
 import Contact from '@/components/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
