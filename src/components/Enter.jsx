@@ -130,31 +130,43 @@ const Enter = () => {
         ref={vantaRef}
         className="h-screen overflow-auto w-full cflexmm pt-32 lg:h-[100vh] bg-gradient-to-b from-secondary4-100 to-secondary4-200 text-primary1 md:pt-20"
       >
-        <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-5">
-          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+        <div className="h-full max-w-[1600px] mx-auto cflexss md:p-5">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10 px-24 md:px-0">
             <div className="cflexsm gap-2 w-1/3 md:w-full mr-[35px]">
-              <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%] mt-[-37px] mr-[-45px]">
-                {/* <Image src={bigi} alt="big music label" />                 */}
-                <Image src={'/enter-logo.svg'} alt="Entr.event" width={416} height={428} />
+              <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
+                <Image
+                  src={"/enter-logo.svg"}
+                  alt="big music label"
+                  width={416}
+                  height={428}
+                />
               </div>
-              <Link href="https://entr.events" className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500">
+              <Link
+                href="https://entr.events"
+                className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
+              >
                 Visit
               </Link>
             </div>
 
             <div className="cflexss pt-2 gap-4 w-2/3 md:w-full">
-              <p className="header" style={{ textTransform: 'inherit' }}>
+              <p className="header" style={{ textTransform: "inherit" }}>
                 ENTR.events
               </p>
               <p className="text-xl font-semibold capitalize">
                 Streamline your party planning, elevate your event’s experience
               </p>
               <p className="text-sm">
-                Introducing ENTR, a revolutionary event creation platform that makes setting-up parties, events and meetings for all occasions easy and hassle-free. We give the power to the host, streamlining the entire process of hosting events, from planning to execution. Our app allows hosts to create events on both mobile and desktop platforms, making it easy to invite guests, set event requirements, book services and build custom events. Whether you're planning a small gathering or a large event, ENTR has everything you need to make your event a success.
+                Introducing ENTR, a revolutionary event creation platform that
+                makes setting-up parties, events and meetings for all occasions
+                easy and hassle-free. We give the power to the host,
+                streamlining the entire process of hosting events, from planning
+                to execution. Our app allows hosts to create events on both
+                mobile and desktop platforms, making it easy to invite guests,
+                set event requirements, book services and build custom events.
+                Whether you're planning a small gathering or a large event, ENTR
+                has everything you need to make your event a success.
               </p>
-              {/* <div className="w-[25em] md:w-[20em] md:ml-[-2em] ml-[-2.5em]">
-                <Image src={baloons} alt="baloons" width="100%" height="100%" />
-              </div> */}
             </div>
           </div>
 
@@ -162,24 +174,39 @@ const Enter = () => {
             <p className="font-bold text-2xl sm1:text-2xl">
               Book and manage event services
             </p>
-            <div className="flexmm w-screen gap-3 flex-wrap pb-5 text-left px-18">
+            <div className="flexmm gap-3 w-screen md:w-full flex-wrap pb-5 text-left px-18">
               {Events.map((event, index) => {
                 return (
-                  <div key={`m_${index}`} className="py-[22px] px-[14px] bg-[#0D0E15] rounded-[16px]">
-                    <div className="flex items-center h-[133px] w-full">
-                      <div className="min-w-[123px] h-[133px]">
-                        <Image src={event.img} alt="smt" className="h-full w-full" />
+                  <div
+                    key={`m_${index}`}
+                    className="py-[22px] px-[14px] bg-[#0D0E15] rounded-[16px]"
+                  >
+                    <div className="flex items-center h-[133px] sm:h-auto w-full">
+                      <div className="min-w-[123px] h-full">
+                        <Image
+                          src={event.img}
+                          alt="smt"
+                          className="h-full w-full"
+                        />
                       </div>
-                      <div className="w-[320px] h-[133px] pl-4">
+                      <div className="max-w-[320px] h-full pl-4">
                         <div className="cflexss gap-1">
-                          <p className="text-[22px] md:text-xl">{event.title}</p>
+                          <p className="text-[22px] md:text-xl">
+                            {event.title}
+                          </p>
                           <div>
                             <p className="text-[13px] text-[#A4A4AA] flex-wrap">
                               {event.content}
                             </p>
                             <div className="flex items-center mt-2">
-                              <Image src={event.star} alt="smt" className="w-[5em]" />
-                              <span className="text-[12px] text-[#A4A4A4]">(32)</span>
+                              <Image
+                                src={event.star}
+                                alt="smt"
+                                className="w-[5em]"
+                              />
+                              <span className="text-[12px] text-[#A4A4A4]">
+                                (32)
+                              </span>
                             </div>
                           </div>
                           <div className="flexsm gap-2">
@@ -191,7 +218,9 @@ const Enter = () => {
                                 alt="smt"
                               />
                             </div>
-                            <p className="text-[14px] text-[#A4A4AA]">{event.type}</p>
+                            <p className="text-[14px] text-[#A4A4AA]">
+                              {event.type}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -206,15 +235,19 @@ const Enter = () => {
             <p className="font-bold text-2xl sm1:text-xl">
               Elevate your event planning with our comprehensive add-on features
             </p>
-            <div className="flexmm gap-7 flex-wrap pb-5 text-left px-18">
+            <div className="flexmm gap-7 w-screen md:w-full flex-wrap pb-5 text-left px-18">
               {Tickets.map((ticket) => {
                 return (
                   <>
-                    <div className="tickets p-3 w-[28em] sm:w-[19em] h-[9em] md:h-auto md:justify-between flex-grow-0 flex-shrink">
-                      <div style={{ width: `${ticket.width}` }}>
-                        <Image src={ticket.img} alt="smt" />
-                      </div>
-                      <div className="cflexss gap-1">
+                    <div className="tickets p-3 py-[22px] px-[14px] h-[150px] sm:h-auto">
+                      <div className="min-w-[100px] h-full">
+                        <Image
+                          src={ticket.img}
+                          alt="smt"
+                          className="h-full w-full"
+                        />
+                      </div>                     
+                      <div className="cflexss gap-1 max-w-[320px] h-full">
                         <p className="text-2xl md:text-xl">{ticket.title}</p>
                         <div>
                           <p className="text-sm text-[#A4A4AA]">

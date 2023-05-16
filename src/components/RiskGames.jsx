@@ -1,8 +1,8 @@
 import Image from "next/image";
-import steps2 from "../Assets/steps2.svg";
 import bubble from "../Assets/bubble.svg";
 import bubble2 from "../Assets/bubble2.svg";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const RiskGames = () => {
   const router = useRouter();
@@ -12,17 +12,20 @@ const RiskGames = () => {
         <div className="cflexsm md:px-0">
           <div className="flexmm w-[80%] pt-10 md:w-full gap-5 px-0 md:px-7 md:flex-col pr-7% md:gap-10">
             <div className="cflexss sm:items-center w-1/3 gap-10 md:w-full">
-              <div className="flexmm w-[14em] md:w-[7em]">
-                <Image src={steps2} alt="gogi" width="100%" height="100%" />
-              </div>
-              <div
-                className="ml-10 sm:ml-0 flexmm bg-primary1 rounded-[5em] md:rounded-12xl w-[6em] h-[2.5em] md:w-[6em] md:h-[3em] text-black font-semibold text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-300"
-                onClick={() => {
-                  window.location.replace("https://riskgames.vercel.app");
-                }}
+              <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
+                <Image
+                  src={"/steps2.svg"}
+                  alt="riskgames"
+                  width={400}
+                  height={400}
+                />
+              </div>            
+              <Link
+                href="https://riskgames.vercel.app"
+                className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
               >
                 Visit
-              </div>
+              </Link>
             </div>
             <div className="cflexss gap-4 w-2/3 md:w-full">
               <p className="header">Riskgames.io</p>
