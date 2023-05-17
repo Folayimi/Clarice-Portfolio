@@ -8,11 +8,11 @@ const RiskGames = () => {
   const router = useRouter();
   return (
     <>
-      <div className="cflexmm pt-32 bg-gradient-to-b w-full h-[100%] lg:h-[100vh] from-secondary5-200 to-secondary5-100 text-primary1 md:pt-20">
+      <div className="cflexmm pt-32 w-full h-[100%] lg:h-[100vh] bg-gradient-to-b from-purple-900 to-blue-900 text-primary1 md:pt-20">
         <div className="cflexsm md:px-0">
           <div className="flexmm w-[80%] pt-10 md:w-full gap-5 px-0 md:px-3 md:flex-col pr-7% md:gap-10">
-            <div className="cflexsm gap-10 sm:gap-5 w-1/3 md:w-full">
-              <div className="flexmm w-[12em] sm:w-[50%]">
+            <div className="cflexsm gap-5 sm:gap-5 w-1/3 md:w-full">
+              <div className="flexmm w-[18em] sm:w-[50%]">
                 <Image
                   src={"/step3.svg"}
                   alt="riskgames"
@@ -45,7 +45,7 @@ const RiskGames = () => {
             </div>
           </div>
           <div className="cflexmm pt-28 md:pt-20 pb-32 w-full gap-10">
-            <p className="font-semibold text-4xl md:text-3xl">Games</p>
+            <p className="font-semibold text-3xl md:text-3xl">Games</p>
             <div className="flexmm w-3/4 md:w-full">
               <div className="flexmm block sm:hidden w-full">               
                 <div className="w-full relative h-full flexss dsk-svg rounded-3xl">
