@@ -46,17 +46,11 @@ const RiskGames = () => {
           </div>
           <div className="cflexmm pt-28 md:pt-20 pb-32 w-full gap-10">
             <p className="font-semibold text-4xl md:text-3xl">Games</p>
-            <div className="flexmm w-3/4 md:w-full  ">
-              <div className="flexmm relative block sm:hidden w-[100%]">
-                <Image
-                  src={"/desktopBg.svg"}
-                  alt="smt"
-                  width={100}
-                  height={50}
-                />
-                <div className="absolute top-0 left-0 w-full h-full flexsm">
-                  <div className="cflexsm ml-[-10%] mt-[-2%] h-full">
-                    <Image
+            <div className="flexmm w-3/4 md:w-full">
+              <div className="flexmm block sm:hidden w-full">               
+                <div className="w-full relative h-full flexss dsk-svg rounded-3xl">
+                  <div className="w-1/2 cflexsm ml-[-8%] mt-[-2%]">
+                    <Image                      
                       src={"/deskbubble.svg"}
                       alt="smt"
                       width={100}
@@ -81,7 +75,7 @@ const RiskGames = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute top-0 right-0 cflexms py-5 px-7 w-3/5 gap-3 h-full">
+                  <div className="w-4/6 ml-[-10%] cflexms py-5 px-7 gap-3 h-full">
                     <div className="w-1/3 flexsm">
                       <Image
                         src={"/psf.svg"}
@@ -90,7 +84,7 @@ const RiskGames = () => {
                         height={100}
                       />
                     </div>
-                    <div className="flex flex-col justify-between items-start text-black h-full w-full">
+                    <div className="flex flex-col justify-center gap-3 items-start text-black h-full w-full">
                       <p>Bubble popping has never been this satisfying</p>
                       <p>
                         Fidget Bubbles is designed to help relieve stress and
@@ -116,14 +110,8 @@ const RiskGames = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className="flexmm relative w-[100%] px-5">
-                  <Image
-                    src={"/mobileBg.svg"}
-                    alt="smt"
-                    width={100}
-                    height={50}
-                  />
-                  <div className="absolute top-0 left-0 w-screen h-full cflexsm text-black">
+                <div className="flexmm w-[100%] bg-svg">                  
+                  <div className="w-full h-full cflexsm text-black">
                     <div className="absolute w-full cflexsm">
                       <Image
                         className="mt-[-15%]"
@@ -184,21 +172,6 @@ const RiskGames = () => {
                   </div>
                 </div>
               </div>
-
-              {/* <Image
-                className="block md:hidden"
-                src={bubble}
-                alt="companies"
-                width="100%"
-                height="100%"
-              />
-              <Image
-                className="hidden md:block"
-                src={bubble2}
-                alt="companies"
-                width="100%"
-                height="100%"
-              /> */}
             </div>
           </div>
         </div>
