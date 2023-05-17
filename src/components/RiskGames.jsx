@@ -11,8 +11,8 @@ const RiskGames = () => {
       <div className="cflexmm pt-32 bg-gradient-to-b w-full h-[100%] lg:h-[100vh] from-secondary5-200 to-secondary5-100 text-primary1 md:pt-20">
         <div className="cflexsm md:px-0">
           <div className="flexmm w-[80%] pt-10 md:w-full gap-5 px-0 md:px-3 md:flex-col pr-7% md:gap-10">
-            <div className="cflexsm gap-2 sm:gap-5 w-1/3 md:w-full">
-              <div className="flexmm w-[20em] md:w-[8em] sm:w-[70%]">
+            <div className="cflexsm gap-10 sm:gap-5 w-1/3 md:w-full">
+              <div className="flexmm w-[12em] sm:w-[50%]">
                 <Image
                   src={"/steps2.svg"}
                   alt="riskgames"
@@ -22,12 +22,12 @@ const RiskGames = () => {
               </div>
               <Link
                 href="https://riskgames.vercel.app"
-                className="bg-primary1 rounded-3xl py-2 px-5 sm:px-10 sm:py-3 text-black sm:font-semibold sm:text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
+                className="bg-primary1 rounded-3xl py-2 px-7 sm:px-10 sm:py-3 text-black font-semibold sm:text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
               >
                 Visit
               </Link>
             </div>
-            <div className="cflexss gap-4 w-2/3 md:w-full">
+            <div className="cflexss gap-4 w-3/5 pr-[7%] sm:pr-0 md:w-full">
               <p className="header">Riskgames.io</p>
               <p className="text-xl font-semibold">
                 escape into the world of risk games
@@ -45,7 +45,7 @@ const RiskGames = () => {
             </div>
           </div>
           <div className="cflexmm pt-28 md:pt-20 pb-32 w-full gap-10">
-            <p className="font-semibold text-4xl md:text-3xl">Games</p>
+            <p className="font-semibold text-3xl md:text-3xl">Games</p>
             <div className="flexmm w-3/4 md:w-full  ">
               <div className="flexmm relative block sm:hidden w-[100%]">
                 <Image
@@ -81,7 +81,7 @@ const RiskGames = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute top-0 right-0 cflexms py-5 px-7 w-3/5 gap-3 h-full">
+                  <div className="absolute top-0 right-0 cflexss py-5 px-7 w-3/5 gap-3 h-full">
                     <div className="w-1/3 flexsm">
                       <Image
                         src={"/psf.svg"}
