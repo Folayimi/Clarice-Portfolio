@@ -47,7 +47,7 @@ const RiskGames = () => {
           <div className="cflexmm pt-28 md:pt-20 pb-32 w-full gap-5">
             <p className="font-semibold text-4xl md:text-3xl">Games</p>
             <div className="flexmm w-3/4 md:w-full  ">
-              <div className="flexmm relative block md:hidden w-[100%]">
+              <div className="flexmm relative block sm:hidden w-[100%]">
                 <Image
                   src={"/desktopBg.svg"}
                   alt="smt"
@@ -107,7 +107,73 @@ const RiskGames = () => {
                         So what are you waiting for? Download the app and pop
                         your stress away!
                       </p>
-                      <Link href="" className="underline italic">fidgetbubbles.com</Link>
+                      <Link href="" className="underline italic">
+                        fidgetbubbles.com
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hidden flexmm relative sm:block w-[100%] px-5">
+                <Image
+                  src={"/mobileBg.svg"}
+                  alt="smt"
+                  width={100}
+                  height={50}
+                />
+                <div className="absolute top-0 left-0 w-full h-full cflexsm text-black">
+                  <div className="mt-[-8%] w-[100%] cflexsm">
+                    <Image
+                      src={"/deskbubble.svg"}
+                      alt="smt"
+                      width={100}
+                      height={100}
+                    />
+                    <Link href="" className="mt-[-2em] underline italic text-xl">
+                      fidgetbubbles.com
+                    </Link>
+                  </div>
+                  <div className="cflexss py-5 px-12 w-full gap-5 h-full">
+                    <div className="w-2/3 flexsm">
+                      <Image
+                        src={"/psf.svg"}
+                        alt="smt"
+                        width={50}
+                        height={100}
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center items-start gap-3 text-black w-full text-justify">
+                      <p>Bubble popping has never been this satisfying</p>
+                      <p>
+                        Fidget Bubbles is designed to help relieve stress and
+                        anxiety. Each bubble you pop releases a satisfying
+                        fidget effect that's both calming and therapeutic.
+                      </p>
+                      <p>
+                        Your goal is to pop as many bubbles as possible to earn
+                        points. Some bubbles contain special items that give you
+                        bonuses, adding excitement and increasing your chances
+                        of a higher score.
+                      </p>
+                    </div>
+                    <div className="cflexmm w-full gap-3">
+                      <div className="bg-black p-3 rounded-xl w-[60%] cursor-pointer">
+                        <Image
+                          src={"/playSt.svg"}
+                          alt="smt"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
+                      <div className="bg-black p-3 rounded-xl w-[60%] cursor-pointer">
+                        <Image
+                          src={"/apple.svg"}
+                          alt="smt"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
