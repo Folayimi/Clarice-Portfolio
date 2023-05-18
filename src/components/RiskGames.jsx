@@ -14,7 +14,7 @@ const RiskGames = () => {
             <div className="cflexsm gap-2 w-1/3 md:w-full">
               <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
                 <Image
-                  src={"/steps2.svg"}
+                  src={"/step3.svg"}
                   alt="riskgames"
                   width={100}
                   height={300}
@@ -23,7 +23,7 @@ const RiskGames = () => {
               </div>
               <Link
                 href="https://riskgames.vercel.app"
-                className="bg-primary1 rounded-3xl py-2 px-5 sm:px-10 sm:py-3 text-black sm:font-semibold sm:text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
+                className="bg-primary1 rounded-3xl py-2 px-7 sm:px-10 sm:py-3 text-black font-semibold sm:text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
               >
                 Visit
               </Link>
