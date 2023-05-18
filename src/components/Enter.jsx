@@ -124,6 +124,7 @@ const Enter = () => {
       width: "13em",
     },
   ];
+  
   return (
     <>
       <div
@@ -132,18 +133,19 @@ const Enter = () => {
       >
         <div className="h-full max-w-[1600px] mx-auto cflexss md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10 px-24 md:px-0">
-            <div className="cflexsm gap-2 w-1/3 md:w-full mr-[35px]">
+            <div className="cflexsm gap-2 w-1/3 md:w-full mr-[35px] mt-[-30px]">
               <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
                 <Image
                   src={"/enter-logo.svg"}
                   alt="big music label"
                   width={416}
                   height={428}
+                  className="w-[260px] h-fit"
                 />
               </div>
               <Link
                 href="https://entr.events"
-                className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
+                className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500 -ml-10"
               >
                 Visit
               </Link>

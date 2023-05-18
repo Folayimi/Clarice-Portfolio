@@ -80,7 +80,7 @@ const Contact = () => {
     },
     {
       name: "postCode",
-      placeHolder: "Postcode",
+      placeHolder: "Post Code",
       type: "number",
       required: true,
     },
@@ -164,7 +164,7 @@ const Contact = () => {
         <div className="cflexss gap-5 w-1/3 md:w-full">
           <p className="text-5xl md:text-4xl font-semibold">Get in touch,</p>
           <p className="text-xl md:text-sm font-light">
-            thank you for taking the time to go through my website. I am always
+            Thank you for taking the time to go through my website. I am always
             excited to connect with like-minded individuals and expand my
             professional network. If you would like to connect with me, please
             don't hesitate to do so. I would be thrilled to hear from you and

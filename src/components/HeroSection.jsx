@@ -33,6 +33,7 @@ const HeroSection = ({ position }) => {
     );
     setVanta();
   };
+  
   useEffect(() => {
     loadVanta();
     return () => {
