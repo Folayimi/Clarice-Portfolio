@@ -23,14 +23,14 @@ const About = ({ position }) => {
               <li>Entertainment</li>
               <li>Finance</li>
               <li>Artificial Intelligence</li>
-              <li>Business</li>
+              {/* <li>Business</li> */}
             </ul>
           </div>
           <p className="text-[25px] text-primary3 font-semibold">
             Fascinated by the worlds of business, I discovered my passion for innovation.
           </p>
           <p className="text-sm text-primary4 font-normal">
-            As a visionary and project manager with a diverse skill set, I have successfully executed projects in a range of sectors, including entertainment, blockchain, trading algorithms, artist development and more. With six years of experience, I am driven to pursue creative projects that make a positive impact on the world, leveraging my entrepreneurial background and brand-building expertise.
+            As a visionary and project manager with a diverse skill set, I have successfully executed projects in a range of sectors, including entertainment, blockchain, trading algorithms, artificial intelligence and more. With six years of experience, I am driven to pursue creative projects that make a positive impact on the world by leveraging my entrepreneurial background and brand-building expertise.
           </p>
           <p className="text-sm text-primary4 font-normal">
             I acquired a passion for business at a young age. As I embarked on my career, I relocated to Los Angeles to collaborate with various teams and optimize project outcomes. By working closely with diverse workforces, I have honed my ability to overcome obstacles to build successful businesses with a solid foundation.

@@ -8,7 +8,7 @@ const RiskGames = () => {
   const router = useRouter();
   return (
     <>
-      <div className="h-screen overflow-auto cflexms pt-32 bg-gradient-to-b w-full from-secondary5-200 to-secondary5-100 text-primary1 md:pt-20">
+      <div className="h-screen overflow-auto cflexms pt-32 bg-gradient-to-b w-full from-[#5E00D6] to-[#290052] text-primary1 md:pt-20">
         <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-5">
           <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
