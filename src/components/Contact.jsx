@@ -12,6 +12,7 @@ const Contact = () => {
   const [fileError, setFileError] = useState(false);
   const [valid, setValid] = useState(false);
   const [email, setEmail] = useState("");
+  const [files, setFiles] = useState([])
   const [userDetails, setUserDetails] = useState({
     companyName: "",
     natureOfBusiness: "",
@@ -172,8 +173,11 @@ const Contact = () => {
           </p>
         </div>
         <form
+          action="https://formsubmit.co/workspaceclarice@gmail.com"
+          method="POST"
+          encType="multipart/form-data"
           className="cflexss w-1/3 md:w-full gap-10 py-10"
-          onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         >
           {Fields.map((field) => {
             return (
@@ -203,12 +207,32 @@ const Contact = () => {
             );
           })}
           <div className="w-full">
-            <div className="relative flexmm w-full p-10 border-2 border-dotted border-white cursor-pointer">
+            <label htmlFor="file" className="relative flexmm w-full p-10 border-2 border-dotted border-white cursor-pointer">
+              <input type="file" name="attachment" id="file" hidden className="cursor-pointer" 
+              onChange={(e) => {
+                if (e.target.files.length > 0) {
+                  var i = 0
+                  for (i = 0; i <= e.target.files.length - 1; i++) {
+                    const fsize = e.target.files.item(i).size;
+                    const file = Math.round((fsize / 1024));
+                    // The size of the file.
+                    if (file > 5120) {
+                      alert(
+                        "File too Big, please select a file less than 5mb");
+                    }
+                    else {
+                      setFiles(e.target.files)
+                    }
+                  }
+                }
+                
+              }}
+               />
               <div className="flexmm gap-2">
                 <Upload />
-                <p>Upload Additional file</p>
+                {files.length>0 ? <p>{`File selected (${files[0]?.name})`}</p> : <p>Upload Additional file</p>}
               </div>
-              <div className="absolute opacity-0">
+              {/* <div className="absolute opacity-0">
                 <FileBase64
                   name="profilePicture"
                   defaultValue={userDetails["file"]}
@@ -217,8 +241,8 @@ const Contact = () => {
                     upload(base64);
                   }}
                 />
-              </div>
-            </div>
+              </div> */}
+            </label>
             {fileError && (
               <p className="text-red-900 text-sm">
                 Can't accept files greater than 10mb.
@@ -228,6 +252,11 @@ const Contact = () => {
               Attach file. File size of your documents should not exceed 10MB
             </p>
           </div>
+          
+          <input type="hidden" name="_subject" value="New contact message from Portfolio site" />
+          <input type="hidden" name="_next" value="https://clarice-portfolio.vercel.app/" />
+          <input type="hidden" name="_captcha" value="false" />
+          {/* <input type="hidden" name="" value="" /> */}
           <button
             type="submit"
             className="w-full py-3 px-5 bg-[#8B04CB] font-semibold cursor-pointer"
@@ -235,7 +264,10 @@ const Contact = () => {
             SUBMIT
           </button>
         </form>
-        <div className="cflexss gap-5 p-5 w-1/3 md:w-full font-light">
+        
+        <form action="http://eepurl.com/irF5No"
+          target="_blank"
+          method="post" className="cflexss gap-5 p-5 w-1/3 md:w-full font-light">
           <p>Would you like to join our newsletter?</p>
           <div className="w-full flexbs gap-5">
             <input
@@ -248,18 +280,18 @@ const Contact = () => {
                 setEmail(e.target.value);
               }}
             />
-            <div
+            <button type="submit"
               className="flexmm w-[3em] h-[2em] bg-[#2931FB] p-2 cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                setEmail("");
-                // HANDLE JOIN TO NEWSLETTER
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   setEmail("");
+              //   // HANDLE JOIN TO NEWSLETTER
+              // }}
             >
               <Check />
-            </div>
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
