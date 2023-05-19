@@ -8,10 +8,10 @@ const RiskGames = () => {
   const router = useRouter();
   return (
     <>
-      <div className="h-screen overflow-auto cflexms pt-32 bg-gradient-to-b w-full from-secondary5-200 to-secondary5-100 text-primary1 sm:pt-20">
-        <div className="h-full max-w-[1600px] w-full mx-auto cflexss px-24 sm:p-5">
-          <div className="flexbm w-full gap-5 sm:flex-col sm:gap-10">
-            <div className="cflexsm gap-2 w-1/3 sm:w-full bg-red-800">
+      <div className="h-screen overflow-auto cflexms pt-32 bg-gradient-to-b w-full from-[#5E00D6] to-[#290052] text-primary1 md:pt-20">
+        <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-5">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+            <div className="cflexsm gap-2 w-1/3 md:w-full">
               <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
                 <Image
                   src={"/step3.svg"}
@@ -29,14 +29,14 @@ const RiskGames = () => {
               </Link>
             </div>
 
-            <div className="cflexss gap-4 w-[67%] sm:w-full bg-blue-800">
-              <p className="header" style={{ textTransform: "initial" }}>
+            <div className="cflexss gap-4 w-[67%] md:w-full">
+              <p className="header md:w-full flexmm" style={{ textTransform: "initial" }}>
                 Riskgames.io
               </p>
-              <p className="text-xl font-semibold">
+              <p className="text-xl font-semibold md:w-full flexmm">
                 Escape into the world of risk games
               </p>
-              <p className="text-sm">
+              <p className="sm:text-sm md:text-xl text-justify w-full">
                 Welcome to Risk Games, a modern gaming company that specializes
                 in creating exciting mobile and desktop games that provide users
                 with an unparalleled gaming experience. Our mission is to create
@@ -53,7 +53,7 @@ const RiskGames = () => {
             <p className="font-semibold text-4xl md:text-3xl">Games</p>
 
             <div
-              className="block sm:hidden relative h-[229px] w-[1110.24px] w-full   mx-auto"
+              className="block sm1:hidden relative h-[229px] w-[1110.24px] w-full rounded-[33px] mx-auto"
               style={{
                 // backgroundColor: 'white',
                 backgroundImage: "url(./images/village_skyline.svg)",
@@ -110,8 +110,8 @@ const RiskGames = () => {
               </div>
             </div>
 
-            <div className="hidden sm:block w-full">
-              <div className="flexmm w-[100%] bg-svg">
+            <div className="hidden sm1:block w-full">
+              <div className="flexmm w-[100%] bg-svg rounded-[33px]">
                 <div className="w-full h-full cflexsm text-black relative">
                   <div className="absolute top-0 left-0 w-full cflexsm">
                     <Image
@@ -123,21 +123,14 @@ const RiskGames = () => {
                     />
                     <Link
                       href=""
-                      className="mt-[-35%] underline italic text-xl"
+                      className="mt-[-35%] sm1:text-2xl underline italic text-xl"
                     >
                       fidgetbubbles.com
                     </Link>
                   </div>
-                  <div className=" mt-[60%] cflexss py-5 px-5 pb-10 w-full gap-5">
-                    <div className="w-2/3 flexsm">
-                      <Image
-                        src={"/psf.svg"}
-                        alt="smt"
-                        width={50}
-                        height={100}
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-start gap-3 text-black text-sm w-full text-justify">
+                  <div className=" mt-[60%] cflexss py-5 px-5 pb-10 w-full gap-[20px]">
+                    <h1 className="font-black text-[40px] sm:text-[24px]">Pop, Splash, Fun</h1>
+                    <div className="flex sm1:text-xl sm:text-sm flex-col justify-center items-start gap-3 text-black text-sm w-full text-justify">
                       <p>Bubble popping has never been this satisfying</p>
                       <p>
                         Fidget Bubbles is designed to help relieve stress and
@@ -151,7 +144,7 @@ const RiskGames = () => {
                         of a higher score.
                       </p>
                     </div>
-                    <div className="cflexmm mt-[-3%] w-full gap-3">
+                    <div className="cflexmm w-full pt-[5px] gap-5">
                       <div className="bg-black p-3 rounded-xl w-[60%] cursor-pointer">
                         <Image
                           src={"/playSt.svg"}

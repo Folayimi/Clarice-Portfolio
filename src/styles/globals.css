@@ -114,7 +114,7 @@ img {
   background-image: url("../../public/mobileBg.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 .dsk-svg {
   background-image: url("../../public/desktopBg.svg");

@@ -43,13 +43,7 @@ const Mission = ({ position }) => {
           <div className="relative cflexms gap-8 w-1/2 md:w-full">
             <p className="font-bold text-6xl md:text-5xl">Mission</p>
             <p className="font-normal text-2xl md:text-xl">
-              At the heart of all my work is a deep desire to make the world a
-              better place. I am dedicated to spreading positivity and helping
-              charitable organizations through my projects. I strive to create
-              projects that not only achieve business success but also make a
-              positive difference in people's lives. My mission is to continue
-              working on creative projects that demonstrate a genuine change in
-              the world and inspire others to do the same.
+              At the heart of all my work is a deep desire to make the world a better place. I am dedicated to spreading positivity and helping charitable organizations through my projects. I strive to create businesses that not only achieve success but also make a positive difference in people's lives. My mission is to continue working on creative projects that demonstrate a genuine change in the world and inspire others to do the same.
             </p>
             <div className="absolute top-[-4em] left-[11em] w-[7em] md:w-[5em] md:top-[-2em]">
               <Image src={hexfill} alt="hexfill" />
