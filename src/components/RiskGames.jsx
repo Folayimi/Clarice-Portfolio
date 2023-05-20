@@ -87,7 +87,7 @@ const RiskGames = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="w-[18%] cflexmm gap-3 h-full mr-7">
+                  <div className="w-[18%] cflexmm gap-3 h-full mr-7 mt-5">
                     <Link href="https://play.google.com/store/apps?utm_source=na_Med&utm_medium=hasem&utm_content=Nov0520&utm_campaign=Evergreen&pcampaignid=MKT-EDR-na-us-1000189-Med-hasem-ap-Evergreen-Nov0520-Text_Search_BKWS-id_100470_%7CEXA%7CONSEM_kwid_43700023139835691&gclid=CjwKCAjwvJyjBhApEiwAWz2nLbbI9X51JW9c1bLkuMUNMhawWlZOHcSLFCAIuaQ5S_krl37Be4k75xoCaM0QAvD_BwE&gclsrc=aw.ds&pli=1" className="w-full bg-black p-3 rounded-xl cursor-pointer">
                       <Image
                         src={"/playSt.svg"}
