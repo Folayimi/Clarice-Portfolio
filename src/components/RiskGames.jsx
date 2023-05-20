@@ -9,8 +9,8 @@ const RiskGames = () => {
   return (
     <>
       <div className="h-screen overflow-auto cflexms pt-32 bg-gradient-to-b w-full from-[#5E00D6] to-[#290052] text-primary1 md:pt-20">
-        <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-5">
-          <div className="flexbm w-full gap-5 md:flex-col md:gap-10">
+        <div className="h-full max-w-[1600px] mx-auto cflexss px-24 md:p-0">
+          <div className="flexbm w-full gap-5 md:flex-col md:gap-10 md:p-5">
             <div className="cflexsm gap-2 w-1/3 md:w-full">
               <div className="flexmm w-[20em] md:w-[15em] sm:w-[70%]">
                 <Image
@@ -108,7 +108,7 @@ const RiskGames = () => {
                 </div>
               </div>
 
-              <div className="hidden sm:block p-[1em]">
+              <div className="hidden sm:block p-5">
                 <div className="-z-0 flexmm w-full bg-svg rounded-3xl">
                   <div className="w-full h-full cflexsm text-black">
                     <div className="relative w-full cflexsm">
@@ -164,8 +164,8 @@ const RiskGames = () => {
                   </div>
                 </div>
               </div>
+              
             </div>                                  
-
           </div>
         </div>
       </div>
