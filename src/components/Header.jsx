@@ -5,7 +5,7 @@ import {
   UserCircleOutline,
   PhoneOutline,
   MenuOutline,
-  GlobeAltOutline
+  GlobeAltOutline,
 } from "heroicons-react";
 import { useState } from "react";
 import Image from "next/image";
@@ -43,7 +43,6 @@ const Header = () => {
                 setMargin(-100);
               }}
             >
-              <HomeOutline size="30px" color="black" />
               Home
             </li>
             <li
@@ -53,7 +52,6 @@ const Header = () => {
                 setMargin(-100);
               }}
             >
-              <UserCircleOutline size="30px" color="black" />
               About me
             </li>
             <li
@@ -62,21 +60,7 @@ const Header = () => {
                 router.push("/?page=mission");
                 setMargin(-100);
               }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="black"
-                className="w-7 h-7"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-                />
-              </svg>
+            >              
               Mission
             </li>
             <li className="cflexsmd gap-2">
@@ -90,8 +74,7 @@ const Header = () => {
                   }
                 }}
               >
-                <GlobeAltOutline size="30px" color="black" /> Companies{" "}
-                <ChevronDown />
+                Companies <ChevronDown />
               </div>
               <ul
                 className={
@@ -158,8 +141,7 @@ const Header = () => {
                 router.push("/contact");
                 setMargin(-100);
               }}
-            >
-              <PhoneOutline size="30px" color="black" />
+            >              
               Contact
             </li>
           </ul>
@@ -174,16 +156,28 @@ const Header = () => {
             Clarice
           </p>
           <div className="flexmm gap-3">
-            <Link href={`https://www.facebook.com/profile.php?id=100087506825565`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            <Link
+              href={`https://www.facebook.com/profile.php?id=100087506825565`}
+              className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer"
+            >
               <Image src={facebook} alt="facebook" />
             </Link>
-            <Link href={`https://twitter.com/claricebona`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            <Link
+              href={`https://twitter.com/claricebona`}
+              className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer"
+            >
               <Image src={twitter} alt="twitter" />
             </Link>
-            <Link href={`https://www.instagram.com/clariceistheone/`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            <Link
+              href={`https://www.instagram.com/clariceistheone/`}
+              className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer"
+            >
               <Image src={instagram} alt="instagram" />
             </Link>
-            <Link href={`https://www.linkedin.com/in/clarice-bona-994163270/`} className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer">
+            <Link
+              href={`https://www.linkedin.com/in/clarice-bona-994163270/`}
+              className="flexmm w-[1.5em] h-[1.5em] rounded-[0.75em] bg-black cursor-pointer"
+            >
               <Image src={linkedIn} alt="linkedln" />
             </Link>
           </div>
