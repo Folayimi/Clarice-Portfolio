@@ -56,7 +56,7 @@ const RiskGames = () => {
             <p className="font-semibold text-4xl md:text-3xl">Games</p>
             <div className=" max-w-[1600px] w-full">
               <div className="flexmm block sm1:hidden w-full">
-                <div className="w-[80%] h-full flexbm dsk-svg rounded-3xl">
+                <div className="w-[80%] h-full flex justify-between items-center dsk-svg rounded-3xl">
                   <div className="relative w-[25%] cflexsm text-black">
                     <div className="absolute -z-0 top-0 left-0 mt-[-14%] ml-[-41%] w-[190%] pointer-events-none">
                       <Image
