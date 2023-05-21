@@ -158,7 +158,7 @@ const Enter = () => {
               <p className="text-xl font-semibold capitalize">
                 Streamline your party planning, elevate your event’s experience
               </p>
-              <p className="text-sm">
+              <p className="text-sm text-justify w-full">
                 Introducing ENTR, a revolutionary event creation platform that
                 makes setting-up parties, events and meetings for all occasions
                 easy and hassle-free. We give the power to the host,

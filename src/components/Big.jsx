@@ -31,7 +31,7 @@ const Project2 = () => {
                 With over 60 years of combined experience, we professionally
                 manage, develop and grow artists careers
               </p>
-              <p className="text-sm">
+              <p className="text-sm text-justify w-full">
                 Big Music Label focuses on developing exceptional talent,
                 fostering a love for music, and motivating new artists. We've
                 built a record company that offers artists a safe atmosphere

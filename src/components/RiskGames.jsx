@@ -23,23 +23,23 @@ const RiskGames = () => {
               </div>
               <Link
                 href="https://riskgames.vercel.app"
-                className="bg-primary1 rounded-3xl py-2 px-7 sm:px-10 sm:py-3 text-black font-semibold sm:text-xl cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
+                className="bg-primary1 rounded-3xl py-2 px-5 text-black cursor-pointer hover:text-primary1 hover:bg-black transition-colors duration-500"
               >
                 Visit
               </Link>
             </div>
 
-            <div className="cflexss gap-4 w-[67%] md:w-full px-24">
+            <div className="cflexss gap-4 w-[67%] md:w-full px-24 md:px-0">
               <p
-                className="header md:w-full flexmm"
+                className="header"
                 style={{ textTransform: "initial" }}
               >
                 Riskgames.io
               </p>
-              <p className="text-xl font-semibold md:w-full flexmm">
+              <p className="text-xl font-semibold">
                 Escape into the world of risk games
               </p>
-              <p className="sm:text-sm md:text-xl text-justify w-full">
+              <p className="sm:text-sm text-justify w-full">
                 Welcome to Risk Games, a modern gaming company that specializes
                 in creating exciting mobile and desktop games that provide users
                 with an unparalleled gaming experience. Our mission is to create
