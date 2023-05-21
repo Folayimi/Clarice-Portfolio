@@ -30,10 +30,7 @@ const RiskGames = () => {
             </div>
 
             <div className="cflexss gap-4 w-[67%] md:w-full px-24 md:px-0">
-              <p
-                className="header"
-                style={{ textTransform: "initial" }}
-              >
+              <p className="header" style={{ textTransform: "initial" }}>
                 Riskgames.io
               </p>
               <p className="text-xl font-semibold">
@@ -165,22 +162,28 @@ const RiskGames = () => {
                         </p>
                       </div>
                       <div className="cflexmm w-full gap-3">
-                        <div className="bg-black p-3 rounded-xl w-[60%] cursor-pointer">
+                        <Link
+                          href="https://play.google.com/store/apps?utm_source=na_Med&utm_medium=hasem&utm_content=Nov0520&utm_campaign=Evergreen&pcampaignid=MKT-EDR-na-us-1000189-Med-hasem-ap-Evergreen-Nov0520-Text_Search_BKWS-id_100470_%7CEXA%7CONSEM_kwid_43700023139835691&gclid=CjwKCAjwvJyjBhApEiwAWz2nLbbI9X51JW9c1bLkuMUNMhawWlZOHcSLFCAIuaQ5S_krl37Be4k75xoCaM0QAvD_BwE&gclsrc=aw.ds&pli=1"
+                          className="bg-black p-3 rounded-xl w-[60%] cursor-pointer"
+                        >
                           <Image
                             src={"/playSt.svg"}
                             alt="smt"
                             width={100}
                             height={100}
                           />
-                        </div>
-                        <div className="bg-black p-3 rounded-xl w-[60%] cursor-pointer">
+                        </Link>
+                        <Link
+                          href="https://www.apple.com/app-store/"
+                          className="bg-black p-3 rounded-xl w-[60%] cursor-pointer"
+                        >
                           <Image
                             src={"/apple.svg"}
                             alt="smt"
                             width={100}
                             height={100}
                           />
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
