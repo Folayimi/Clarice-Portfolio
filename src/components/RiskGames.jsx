@@ -53,12 +53,10 @@ const RiskGames = () => {
 
           <div className="cflexmm pt-10 md:pt-20 pb-32 w-full gap-10">
             <p className="font-semibold text-4xl md:text-3xl">Games</p>
-
-
-            <div className="w-[90%] sm:w-[100vw]">
-              <div className="flexmm block sm:hidden w-full">
+            <div className="w-[90%] sm1:w-[100vw]">
+              <div className="flexmm block sm1:hidden w-full">
                 <div className="w-[80%] h-full flexbm dsk-svg rounded-3xl">
-                  <div className="relative w-[25%] cflexsm text-black">
+                  <div className="relative w-[25%] cflexsm text-black h-full">
                     <div className="absolute -z-0 top-0 left-0 mt-[-14%] ml-[-41%] w-[190%] pointer-events-none">
                       <Image
                         src={"/deskbubble.svg"}
@@ -108,7 +106,7 @@ const RiskGames = () => {
                 </div>
               </div>
 
-              <div className="hidden sm:block p-5">
+              <div className="hidden sm1:block p-5">
                 <div className="-z-0 flexmm w-full bg-svg rounded-3xl">
                   <div className="w-full h-full cflexsm text-black">
                     <div className="relative w-full cflexsm">
@@ -125,10 +123,10 @@ const RiskGames = () => {
                       </Link>
                     </div>
                     <div className="cflexss py-5 px-5 w-full gap-5">
-                      <div className="w-2/3 flexsm">
+                      <div className="sm:w-2/3 flexsm">
                         <Image src={"/psf.svg"} alt="smt" width={50} height={100} />
                       </div>
-                      <div className="flex flex-col justify-center items-start gap-3 text-black text-sm w-full text-justify">
+                      <div className="flex flex-col justify-center items-start gap-3 text-black text-xl w-full text-justify">
                         <p>Bubble popping has never been this satisfying</p>
                         <p>
                           Fidget Bubbles is designed to help relieve stress and
