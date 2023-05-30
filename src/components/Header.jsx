@@ -133,6 +133,16 @@ const Header = () => {
                 >
                   Riskgames
                 </li>
+                <li
+                  className="w-full pl-2"
+                  onClick={() => {
+                    router.push("/coolproductionclub");
+                    setShow("hidden");
+                    setMargin(-100);
+                  }}
+                >
+                  CoolProductionClub
+                </li>
               </ul>
             </li>
             <li
@@ -273,6 +283,16 @@ const Header = () => {
                 >
                   Riskgames
                 </li>
+                <li
+                  className="menu"
+                  onClick={() => {
+                    router.push("/coolproductionclub");
+                    setShow("hidden");
+                  }}
+                >
+                  CoolProductionClub
+                </li>
+                
               </ul>
             </li>
             <li

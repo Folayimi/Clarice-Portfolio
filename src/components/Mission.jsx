@@ -124,6 +124,18 @@ const Mission = ({ position }) => {
                 <Image src={steps} alt="steps" width="100%" height="100%" />
               </div>
             </motion.div>
+            <motion.div
+              className="card bg-[#D66600] p-2 px-3"
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 200, damping: 8 }}
+              onClick={() => {
+                router.push("/coolproductionclub");
+              }}
+            >              
+              <div className="w-[20em]">
+                <Image src={"/frame1.svg"} alt="steps" width={100} height={100} />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
