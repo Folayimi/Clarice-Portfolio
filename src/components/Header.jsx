@@ -235,7 +235,7 @@ const Header = () => {
                 className={
                   show === "hidden"
                     ? "hidden"
-                    : "block absolute top-[3em] w-[12em] rounded-[0.5em] border-2 border-black flex flex-col justify-between items-center gap-[1em] bg-white p-2"
+                    : "block absolute top-[3em] w-[14em] rounded-[0.5em] border-2 border-black flex flex-col justify-between items-center gap-[1em] bg-white p-2"
                 }
               >
                 {/* <li
